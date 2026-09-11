@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}система{% endblock %}
+{% block header %}Система и журнал{% endblock %}
+{% block content %}
+<div class="page-intro simple-intro"><h2>Состояние системы</h2></div>
+
+<section class="health-grid">
+    <div class="health-card"><i class="dot green" id="health-controller-dot"></i><div><b>Raspberry Pi</b></div><strong id="health-controller">Подключен</strong></div>
+    <div class="health-card"><i class="dot gray" id="health-servo-dot"></i><div><b>Сервоприводы</b></div><strong id="health-servo">Нет связи</strong></div>
+    <div class="health-card"><i class="dot gray" id="health-camera-dot"></i><div><b>Камера</b></div><strong id="health-camera">Нет связи</strong></div>
+    <div class="health-card"><i class="dot gray" id="health-rail-dot"></i><div><b>Рельса</b></div><strong id="health-rail">Нет связи</strong></div>
+    <div class="health-card"><i class="dot green" id="health-conveyor-dot"></i><div><b>Конвейер</b></div><strong id="health-conveyor">Подключен</strong></div>
+</section>
+
+<section class="panel log-panel"><div class="panel-head"><h3>Журнал событий</h3><button class="quiet-button" id="refresh-logs">Обновить</button></div><div class="log-table-head"><span>Время</span><span>Уровень</span><span>Сообщение</span></div><div id="full-log" class="full-log"></div></section>
+
+<section class="panel safety-panel"><div><span class="eyebrow">БЕЗОПАСНОСТЬ</span><h3>Перед запуском системы</h3></div><div class="check-list"><div><i>01</i><span>Проверить наличие пустых контейнеров в стопке</span><b>контроль оператора</b></div><div><i>02</i><span>Проверить по одному контейнеру красных, зелёных и жёлтых яблок</span><b>контроль оператора</b></div><div><i>03</i><span>Проверить концевики рельсы и физическую кнопку экстренной остановки</span><b>контроль оператора</b></div></div></section>
+{% endblock %}

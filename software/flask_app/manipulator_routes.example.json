@@ -1,0 +1,4169 @@
+{
+  "version": 2,
+  "routes": {
+    "red": [
+      {
+        "id": "7a251bc831854814a633267ac5d28233",
+        "name": "Точка 26",
+        "rail": 316.0,
+        "joints": {
+          "1": 875,
+          "10": 673,
+          "11": 980,
+          "16": 202
+        },
+        "speed_percent": 100,
+        "time_ms": 1600,
+        "action": "none",
+        "shared_key": "cycle-01",
+        "block": "pickup_common"
+      },
+      {
+        "id": "d5776bbd3b4a4bd8ad1b737654810b38",
+        "name": "Точка 27",
+        "rail": 316.0,
+        "joints": {
+          "1": 875,
+          "10": 800,
+          "11": 933,
+          "16": 143
+        },
+        "speed_percent": 15,
+        "time_ms": 1600,
+        "action": "none",
+        "shared_key": "cycle-02",
+        "block": "pickup_common"
+      },
+      {
+        "id": "red-01",
+        "name": "01. Подойти к полному контейнеру",
+        "rail": 316.0,
+        "joints": {
+          "1": 882,
+          "10": 927,
+          "11": 825,
+          "16": 0
+        },
+        "speed_percent": 15,
+        "time_ms": 1600,
+        "action": "none",
+        "shared_key": "cycle-03",
+        "block": "pickup_common"
+      },
+      {
+        "id": "red-02",
+        "name": "02. Ввести вилы под полный контейнер",
+        "rail": 316.0,
+        "joints": {
+          "1": 882,
+          "10": 895,
+          "11": 668,
+          "16": 159
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-04",
+        "block": "pickup_common"
+      },
+      {
+        "id": "6316d0ea2e024e81ac385ed941b4cbac",
+        "name": "Точка 28",
+        "rail": 316.0,
+        "joints": {
+          "1": 882,
+          "10": 900,
+          "11": 668,
+          "16": 9
+        },
+        "speed_percent": 15,
+        "time_ms": 2700,
+        "action": "none",
+        "shared_key": "cycle-05",
+        "block": "pickup_common"
+      },
+      {
+        "id": "red-03",
+        "name": "03. Поджать и подтянуть полный контейнер",
+        "rail": 318.0,
+        "joints": {
+          "1": 875,
+          "10": 704,
+          "11": 883,
+          "16": 0
+        },
+        "speed_percent": 15,
+        "time_ms": 1300,
+        "action": "take_full",
+        "shared_key": "cycle-06",
+        "block": "pickup_common"
+      },
+      {
+        "id": "red-04",
+        "name": "04. Поднять груз к оси плеча",
+        "rail": 318.0,
+        "joints": {
+          "1": 875,
+          "10": 261,
+          "11": 1000,
+          "16": 285
+        },
+        "speed_percent": 15,
+        "time_ms": 2900,
+        "action": "none",
+        "shared_key": "cycle-07",
+        "block": "pickup_common"
+      },
+      {
+        "id": "8c58b2333e4e430d946fca27e31d97fa",
+        "name": "Точка 21",
+        "rail": 318.0,
+        "joints": {
+          "1": 125,
+          "10": 269,
+          "11": 931,
+          "16": 310
+        },
+        "speed_percent": 15,
+        "time_ms": 2000,
+        "action": "none",
+        "shared_key": "cycle-08",
+        "block": "pickup_common"
+      },
+      {
+        "id": "5bdddba4bbb94ed18e848f62d3dc8173",
+        "name": "Точка 22",
+        "rail": 335.0,
+        "joints": {
+          "1": 125,
+          "10": 719,
+          "11": 830,
+          "16": 84
+        },
+        "speed_percent": 15,
+        "time_ms": 1500,
+        "action": "none",
+        "shared_key": "cycle-09",
+        "group": "full",
+        "block": "full_level"
+      },
+      {
+        "id": "f7b1d340fc4f464095c5c9402442e4ec",
+        "name": "Точка 23",
+        "rail": 335.0,
+        "joints": {
+          "1": 125,
+          "10": 850,
+          "11": 760,
+          "16": 84
+        },
+        "speed_percent": 15,
+        "time_ms": 1500,
+        "action": "none",
+        "shared_key": "cycle-10",
+        "group": "full",
+        "block": "full_level"
+      },
+      {
+        "id": "red-05",
+        "name": "05. Поставить полный контейнер в стопку",
+        "rail": 335.0,
+        "joints": {
+          "1": 125,
+          "10": 919,
+          "11": 668,
+          "16": 163
+        },
+        "speed_percent": 15,
+        "time_ms": 1800,
+        "action": "place_full",
+        "shared_key": "cycle-11",
+        "group": "full",
+        "block": "full_level"
+      },
+      {
+        "id": "red-06",
+        "name": "06. Вывести вилы из полного контейнера",
+        "rail": 335.0,
+        "joints": {
+          "1": 125,
+          "10": 937,
+          "11": 831,
+          "16": 0
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-12",
+        "group": "full",
+        "block": "full_level"
+      },
+      {
+        "id": "c8010ce9b9164ffab6cd1a88d59d00f4",
+        "name": "Точка 13",
+        "rail": 335.0,
+        "joints": {
+          "1": 125,
+          "10": 757,
+          "11": 960,
+          "16": 178
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-13",
+        "group": "full",
+        "block": "full_level"
+      },
+      {
+        "id": "d50f9f449de94974bfe38d216670504f",
+        "name": "Точка 24",
+        "rail": 335.0,
+        "joints": {
+          "1": 125,
+          "10": 692,
+          "11": 987,
+          "16": 274
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-14",
+        "group": "full",
+        "block": "full_level"
+      },
+      {
+        "id": "9420bcb505e1484e852be827ab3aa9b9",
+        "name": "Точка 25",
+        "rail": 335.0,
+        "joints": {
+          "1": 125,
+          "10": 570,
+          "11": 1000,
+          "16": 418
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-15",
+        "group": "full",
+        "block": "full_level"
+      },
+      {
+        "id": "7c414ebbb5f7465f834a91bfae1674ea",
+        "name": "Точка 29",
+        "rail": 339.0,
+        "joints": {
+          "1": 125,
+          "10": 320,
+          "11": 878,
+          "16": 380
+        },
+        "speed_percent": 90,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-16",
+        "block": "transition_common"
+      },
+      {
+        "id": "red-07",
+        "name": "07. Подойти к верхнему пустому контейнеру",
+        "rail": 343.0,
+        "joints": {
+          "1": 500,
+          "10": 435,
+          "11": 705,
+          "16": 608
+        },
+        "speed_percent": 15,
+        "time_ms": 1700,
+        "action": "none",
+        "shared_key": "cycle-17",
+        "group": "empty",
+        "block": "empty_level"
+      },
+      {
+        "id": "red-08",
+        "name": "08. Ввести вилы под пустой контейнер",
+        "rail": 343.0,
+        "joints": {
+          "1": 500,
+          "10": 615,
+          "11": 523,
+          "16": 608
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-18",
+        "group": "empty",
+        "block": "empty_level"
+      },
+      {
+        "id": "cab0b93f0d324fc7b784a0df12397a45",
+        "name": "Точка 28",
+        "rail": 316.0,
+        "joints": {
+          "1": 500,
+          "10": 534,
+          "11": 538,
+          "16": 528
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-19",
+        "group": "empty",
+        "block": "empty_level"
+      },
+      {
+        "id": "b1ac55e1807b4807af6f8c345ddffd18",
+        "name": "Точка 29",
+        "rail": 316.0,
+        "joints": {
+          "1": 500,
+          "10": 350,
+          "11": 749,
+          "16": 528
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-20",
+        "group": "empty",
+        "block": "empty_level"
+      },
+      {
+        "id": "red-09",
+        "name": "09. Поджать и поднять пустой контейнер",
+        "rail": 316.0,
+        "joints": {
+          "1": 500,
+          "10": 283,
+          "11": 1000,
+          "16": 343
+        },
+        "speed_percent": 15,
+        "time_ms": 1000,
+        "action": "take_empty",
+        "shared_key": "cycle-21",
+        "block": "return_to_station"
+      },
+      {
+        "id": "aa6f5a68242942229476649cc2c54b20",
+        "name": "Точка 16",
+        "rail": 316.0,
+        "joints": {
+          "1": 880,
+          "10": 250,
+          "11": 1000,
+          "16": 374
+        },
+        "speed_percent": 15,
+        "time_ms": 1400,
+        "action": "none",
+        "shared_key": "cycle-22",
+        "block": "delivery_color"
+      },
+      {
+        "id": "15e3a8a6b02645f18e7f6e2f9476a050",
+        "name": "Точка 17",
+        "rail": 316.0,
+        "joints": {
+          "1": 880,
+          "10": 570,
+          "11": 1000,
+          "16": 102
+        },
+        "speed_percent": 15,
+        "time_ms": 1400,
+        "action": "none",
+        "shared_key": "cycle-23",
+        "block": "delivery_color"
+      },
+      {
+        "id": "0782a9a4d4b647adb248e8dfc6db201b",
+        "name": "Точка 18",
+        "rail": 316.0,
+        "joints": {
+          "1": 880,
+          "10": 814,
+          "11": 772,
+          "16": 46
+        },
+        "speed_percent": 15,
+        "time_ms": 1400,
+        "action": "none",
+        "shared_key": "cycle-24",
+        "block": "delivery_color"
+      },
+      {
+        "id": "red-10",
+        "name": "10. Поставить пустой контейнер на станцию",
+        "rail": 316.0,
+        "joints": {
+          "1": 880,
+          "10": 896,
+          "11": 675,
+          "16": 165
+        },
+        "speed_percent": 15,
+        "time_ms": 1800,
+        "action": "place_empty",
+        "shared_key": "cycle-25",
+        "block": "delivery_color"
+      },
+      {
+        "id": "red-11",
+        "name": "11. Вывести вилы из нового контейнера",
+        "rail": 316.0,
+        "joints": {
+          "1": 880,
+          "10": 906,
+          "11": 862,
+          "16": 0
+        },
+        "speed_percent": 15,
+        "time_ms": 1300,
+        "action": "none",
+        "shared_key": "cycle-26",
+        "block": "delivery_color"
+      },
+      {
+        "id": "c17357a4d21846bb8e80cecee1f70dd0",
+        "name": "Точка 19",
+        "rail": 316.0,
+        "joints": {
+          "1": 875,
+          "10": 821,
+          "11": 937,
+          "16": 0
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-27",
+        "block": "delivery_color"
+      },
+      {
+        "id": "292ae488ab9749bf8c435845165aa134",
+        "name": "Точка 20",
+        "rail": 316.0,
+        "joints": {
+          "1": 875,
+          "10": 651,
+          "11": 937,
+          "16": 0
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-28",
+        "block": "delivery_color"
+      },
+      {
+        "id": "red-12",
+        "name": "12. HOME — ожидание",
+        "rail": 0.0,
+        "joints": {
+          "1": 500,
+          "10": 500,
+          "11": 375,
+          "16": 500
+        },
+        "speed_percent": 100,
+        "time_ms": 1600,
+        "action": "none",
+        "shared_key": "cycle-29",
+        "block": "home"
+      }
+    ],
+    "green": [
+      {
+        "id": "green-cycle-01",
+        "name": "Точка 26",
+        "rail": 160.0,
+        "joints": {
+          "1": 875,
+          "10": 673,
+          "11": 980,
+          "16": 202
+        },
+        "speed_percent": 100,
+        "time_ms": 1600,
+        "action": "none",
+        "shared_key": "cycle-01",
+        "block": "pickup_common"
+      },
+      {
+        "id": "green-cycle-02",
+        "name": "Точка 27",
+        "rail": 160.0,
+        "joints": {
+          "1": 875,
+          "10": 800,
+          "11": 933,
+          "16": 143
+        },
+        "speed_percent": 15,
+        "time_ms": 1600,
+        "action": "none",
+        "shared_key": "cycle-02",
+        "block": "pickup_common"
+      },
+      {
+        "id": "green-cycle-03",
+        "name": "01. Подойти к полному контейнеру",
+        "rail": 160.0,
+        "joints": {
+          "1": 882,
+          "10": 927,
+          "11": 825,
+          "16": 0
+        },
+        "speed_percent": 15,
+        "time_ms": 1600,
+        "action": "none",
+        "shared_key": "cycle-03",
+        "block": "pickup_common"
+      },
+      {
+        "id": "green-cycle-04",
+        "name": "02. Ввести вилы под полный контейнер",
+        "rail": 160.0,
+        "joints": {
+          "1": 882,
+          "10": 895,
+          "11": 668,
+          "16": 159
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-04",
+        "block": "pickup_common"
+      },
+      {
+        "id": "green-cycle-05",
+        "name": "Точка 28",
+        "rail": 160.0,
+        "joints": {
+          "1": 882,
+          "10": 900,
+          "11": 668,
+          "16": 9
+        },
+        "speed_percent": 15,
+        "time_ms": 2700,
+        "action": "none",
+        "shared_key": "cycle-05",
+        "block": "pickup_common"
+      },
+      {
+        "id": "green-cycle-06",
+        "name": "03. Поджать и подтянуть полный контейнер",
+        "rail": 160.0,
+        "joints": {
+          "1": 875,
+          "10": 704,
+          "11": 883,
+          "16": 0
+        },
+        "speed_percent": 15,
+        "time_ms": 1300,
+        "action": "take_full",
+        "shared_key": "cycle-06",
+        "block": "pickup_common"
+      },
+      {
+        "id": "0802aadf58ee4d008d67bd3b44a557ed",
+        "name": "04. Поднять груз к оси плеча · копия",
+        "rail": 160.0,
+        "joints": {
+          "1": 875,
+          "10": 261,
+          "11": 1000,
+          "16": 285
+        },
+        "speed_percent": 15,
+        "time_ms": 2900,
+        "action": "none",
+        "shared_key": "cycle-07",
+        "block": "pickup_common"
+      },
+      {
+        "id": "green-cycle-08",
+        "name": "Точка 21",
+        "rail": 175.0,
+        "joints": {
+          "1": 125,
+          "10": 269,
+          "11": 931,
+          "16": 310
+        },
+        "speed_percent": 15,
+        "time_ms": 2000,
+        "action": "none",
+        "shared_key": "cycle-08",
+        "block": "pickup_common"
+      },
+      {
+        "id": "green-cycle-09",
+        "name": "Точка 22",
+        "rail": 188.0,
+        "joints": {
+          "1": 125,
+          "10": 719,
+          "11": 830,
+          "16": 84
+        },
+        "speed_percent": 15,
+        "time_ms": 1500,
+        "action": "none",
+        "shared_key": "cycle-09",
+        "group": "full",
+        "block": "full_level"
+      },
+      {
+        "id": "green-cycle-10",
+        "name": "Точка 23",
+        "rail": 188.0,
+        "joints": {
+          "1": 125,
+          "10": 850,
+          "11": 760,
+          "16": 84
+        },
+        "speed_percent": 15,
+        "time_ms": 1500,
+        "action": "none",
+        "shared_key": "cycle-10",
+        "group": "full",
+        "block": "full_level"
+      },
+      {
+        "id": "green-cycle-11",
+        "name": "05. Поставить полный контейнер в стопку",
+        "rail": 188.0,
+        "joints": {
+          "1": 125,
+          "10": 919,
+          "11": 668,
+          "16": 163
+        },
+        "speed_percent": 15,
+        "time_ms": 1800,
+        "action": "place_full",
+        "shared_key": "cycle-11",
+        "group": "full",
+        "block": "full_level"
+      },
+      {
+        "id": "green-cycle-12",
+        "name": "06. Вывести вилы из полного контейнера",
+        "rail": 188.0,
+        "joints": {
+          "1": 125,
+          "10": 937,
+          "11": 831,
+          "16": 0
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-12",
+        "group": "full",
+        "block": "full_level"
+      },
+      {
+        "id": "green-cycle-13",
+        "name": "Точка 13",
+        "rail": 188.0,
+        "joints": {
+          "1": 125,
+          "10": 757,
+          "11": 960,
+          "16": 178
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-13",
+        "group": "full",
+        "block": "full_level"
+      },
+      {
+        "id": "green-cycle-14",
+        "name": "Точка 24",
+        "rail": 188.0,
+        "joints": {
+          "1": 125,
+          "10": 692,
+          "11": 987,
+          "16": 274
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-14",
+        "group": "full",
+        "block": "full_level"
+      },
+      {
+        "id": "green-cycle-15",
+        "name": "Точка 25",
+        "rail": 188.0,
+        "joints": {
+          "1": 125,
+          "10": 570,
+          "11": 1000,
+          "16": 418
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-15",
+        "group": "full",
+        "block": "full_level"
+      },
+      {
+        "id": "green-cycle-16",
+        "name": "Точка 29",
+        "rail": 335.0,
+        "joints": {
+          "1": 125,
+          "10": 320,
+          "11": 878,
+          "16": 380
+        },
+        "speed_percent": 90,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-16",
+        "block": "transition_common"
+      },
+      {
+        "id": "green-cycle-17",
+        "name": "07. Подойти к верхнему пустому контейнеру",
+        "rail": 343.0,
+        "joints": {
+          "1": 500,
+          "10": 435,
+          "11": 705,
+          "16": 608
+        },
+        "speed_percent": 15,
+        "time_ms": 1700,
+        "action": "none",
+        "shared_key": "cycle-17",
+        "group": "empty",
+        "block": "empty_level"
+      },
+      {
+        "id": "green-cycle-18",
+        "name": "08. Ввести вилы под пустой контейнер",
+        "rail": 343.0,
+        "joints": {
+          "1": 500,
+          "10": 615,
+          "11": 523,
+          "16": 608
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-18",
+        "group": "empty",
+        "block": "empty_level"
+      },
+      {
+        "id": "green-cycle-19",
+        "name": "Точка 28",
+        "rail": 316.0,
+        "joints": {
+          "1": 500,
+          "10": 534,
+          "11": 538,
+          "16": 528
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-19",
+        "group": "empty",
+        "block": "empty_level"
+      },
+      {
+        "id": "green-cycle-20",
+        "name": "Точка 29",
+        "rail": 316.0,
+        "joints": {
+          "1": 500,
+          "10": 350,
+          "11": 749,
+          "16": 528
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-20",
+        "group": "empty",
+        "block": "empty_level"
+      },
+      {
+        "id": "green-cycle-21",
+        "name": "09. Поджать и поднять пустой контейнер",
+        "rail": 169.0,
+        "joints": {
+          "1": 500,
+          "10": 283,
+          "11": 1000,
+          "16": 343
+        },
+        "speed_percent": 15,
+        "time_ms": 1000,
+        "action": "take_empty",
+        "shared_key": "cycle-21",
+        "block": "return_to_station"
+      },
+      {
+        "id": "green-cycle-22",
+        "name": "Точка 16",
+        "rail": 160.0,
+        "joints": {
+          "1": 880,
+          "10": 250,
+          "11": 1000,
+          "16": 374
+        },
+        "speed_percent": 15,
+        "time_ms": 1400,
+        "action": "none",
+        "shared_key": "cycle-22",
+        "block": "delivery_color"
+      },
+      {
+        "id": "green-cycle-23",
+        "name": "Точка 17",
+        "rail": 160.0,
+        "joints": {
+          "1": 880,
+          "10": 570,
+          "11": 1000,
+          "16": 102
+        },
+        "speed_percent": 15,
+        "time_ms": 1400,
+        "action": "none",
+        "shared_key": "cycle-23",
+        "block": "delivery_color"
+      },
+      {
+        "id": "green-cycle-24",
+        "name": "Точка 18",
+        "rail": 160.0,
+        "joints": {
+          "1": 886,
+          "10": 814,
+          "11": 772,
+          "16": 46
+        },
+        "speed_percent": 15,
+        "time_ms": 1400,
+        "action": "none",
+        "shared_key": "cycle-24",
+        "block": "delivery_color"
+      },
+      {
+        "id": "green-cycle-25",
+        "name": "10. Поставить пустой контейнер на станцию",
+        "rail": 160.0,
+        "joints": {
+          "1": 886,
+          "10": 896,
+          "11": 675,
+          "16": 165
+        },
+        "speed_percent": 15,
+        "time_ms": 1800,
+        "action": "place_empty",
+        "shared_key": "cycle-25",
+        "block": "delivery_color"
+      },
+      {
+        "id": "green-cycle-26",
+        "name": "11. Вывести вилы из нового контейнера",
+        "rail": 160.0,
+        "joints": {
+          "1": 880,
+          "10": 906,
+          "11": 862,
+          "16": 0
+        },
+        "speed_percent": 15,
+        "time_ms": 1300,
+        "action": "none",
+        "shared_key": "cycle-26",
+        "block": "delivery_color"
+      },
+      {
+        "id": "green-cycle-27",
+        "name": "Точка 19",
+        "rail": 160.0,
+        "joints": {
+          "1": 875,
+          "10": 821,
+          "11": 937,
+          "16": 0
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-27",
+        "block": "delivery_color"
+      },
+      {
+        "id": "green-cycle-28",
+        "name": "Точка 20",
+        "rail": 169.0,
+        "joints": {
+          "1": 875,
+          "10": 651,
+          "11": 937,
+          "16": 0
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-28",
+        "block": "delivery_color"
+      },
+      {
+        "id": "green-cycle-29",
+        "name": "12. HOME — ожидание",
+        "rail": 0.0,
+        "joints": {
+          "1": 500,
+          "10": 500,
+          "11": 375,
+          "16": 500
+        },
+        "speed_percent": 100,
+        "time_ms": 1600,
+        "action": "none",
+        "shared_key": "cycle-29",
+        "block": "home"
+      }
+    ],
+    "yellow": [
+      {
+        "id": "yellow-cycle-01",
+        "name": "Точка 26",
+        "rail": 10.0,
+        "joints": {
+          "1": 875,
+          "10": 673,
+          "11": 980,
+          "16": 202
+        },
+        "speed_percent": 100,
+        "time_ms": 1600,
+        "action": "none",
+        "shared_key": "cycle-01",
+        "block": "pickup_common"
+      },
+      {
+        "id": "yellow-cycle-02",
+        "name": "Точка 27",
+        "rail": 10.0,
+        "joints": {
+          "1": 875,
+          "10": 800,
+          "11": 933,
+          "16": 143
+        },
+        "speed_percent": 15,
+        "time_ms": 1600,
+        "action": "none",
+        "shared_key": "cycle-02",
+        "block": "pickup_common"
+      },
+      {
+        "id": "yellow-cycle-03",
+        "name": "01. Подойти к полному контейнеру",
+        "rail": 10.0,
+        "joints": {
+          "1": 882,
+          "10": 927,
+          "11": 825,
+          "16": 0
+        },
+        "speed_percent": 15,
+        "time_ms": 1600,
+        "action": "none",
+        "shared_key": "cycle-03",
+        "block": "pickup_common"
+      },
+      {
+        "id": "yellow-cycle-04",
+        "name": "02. Ввести вилы под полный контейнер",
+        "rail": 10.0,
+        "joints": {
+          "1": 882,
+          "10": 895,
+          "11": 668,
+          "16": 159
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-04",
+        "block": "pickup_common"
+      },
+      {
+        "id": "yellow-cycle-05",
+        "name": "Точка 28",
+        "rail": 10.0,
+        "joints": {
+          "1": 882,
+          "10": 900,
+          "11": 668,
+          "16": 9
+        },
+        "speed_percent": 15,
+        "time_ms": 2700,
+        "action": "none",
+        "shared_key": "cycle-05",
+        "block": "pickup_common"
+      },
+      {
+        "id": "yellow-cycle-06",
+        "name": "03. Поджать и подтянуть полный контейнер",
+        "rail": 10.0,
+        "joints": {
+          "1": 875,
+          "10": 704,
+          "11": 883,
+          "16": 0
+        },
+        "speed_percent": 15,
+        "time_ms": 1300,
+        "action": "take_full",
+        "shared_key": "cycle-06",
+        "block": "pickup_common"
+      },
+      {
+        "id": "yellow-cycle-07",
+        "name": "04. Поднять груз к оси плеча",
+        "rail": 10.0,
+        "joints": {
+          "1": 875,
+          "10": 261,
+          "11": 1000,
+          "16": 285
+        },
+        "speed_percent": 15,
+        "time_ms": 2900,
+        "action": "none",
+        "shared_key": "cycle-07",
+        "block": "pickup_common"
+      },
+      {
+        "id": "yellow-cycle-08",
+        "name": "Точка 21",
+        "rail": 33.0,
+        "joints": {
+          "1": 125,
+          "10": 269,
+          "11": 931,
+          "16": 310
+        },
+        "speed_percent": 15,
+        "time_ms": 2000,
+        "action": "none",
+        "shared_key": "cycle-08",
+        "block": "pickup_common"
+      },
+      {
+        "id": "yellow-cycle-09",
+        "name": "Точка 22",
+        "rail": 33.0,
+        "joints": {
+          "1": 125,
+          "10": 719,
+          "11": 830,
+          "16": 84
+        },
+        "speed_percent": 15,
+        "time_ms": 1500,
+        "action": "none",
+        "shared_key": "cycle-09",
+        "group": "full",
+        "block": "full_level"
+      },
+      {
+        "id": "yellow-cycle-10",
+        "name": "Точка 23",
+        "rail": 33.0,
+        "joints": {
+          "1": 125,
+          "10": 850,
+          "11": 760,
+          "16": 84
+        },
+        "speed_percent": 15,
+        "time_ms": 1500,
+        "action": "none",
+        "shared_key": "cycle-10",
+        "group": "full",
+        "block": "full_level"
+      },
+      {
+        "id": "yellow-cycle-11",
+        "name": "05. Поставить полный контейнер в стопку",
+        "rail": 33.0,
+        "joints": {
+          "1": 125,
+          "10": 919,
+          "11": 668,
+          "16": 163
+        },
+        "speed_percent": 15,
+        "time_ms": 1800,
+        "action": "place_full",
+        "shared_key": "cycle-11",
+        "group": "full",
+        "block": "full_level"
+      },
+      {
+        "id": "yellow-cycle-12",
+        "name": "06. Вывести вилы из полного контейнера",
+        "rail": 33.0,
+        "joints": {
+          "1": 125,
+          "10": 937,
+          "11": 831,
+          "16": 0
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-12",
+        "group": "full",
+        "block": "full_level"
+      },
+      {
+        "id": "yellow-cycle-13",
+        "name": "Точка 13",
+        "rail": 33.0,
+        "joints": {
+          "1": 125,
+          "10": 757,
+          "11": 960,
+          "16": 178
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-13",
+        "group": "full",
+        "block": "full_level"
+      },
+      {
+        "id": "yellow-cycle-14",
+        "name": "Точка 24",
+        "rail": 33.0,
+        "joints": {
+          "1": 125,
+          "10": 692,
+          "11": 987,
+          "16": 274
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-14",
+        "group": "full",
+        "block": "full_level"
+      },
+      {
+        "id": "yellow-cycle-15",
+        "name": "Точка 25",
+        "rail": 33.0,
+        "joints": {
+          "1": 125,
+          "10": 570,
+          "11": 1000,
+          "16": 418
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-15",
+        "group": "full",
+        "block": "full_level"
+      },
+      {
+        "id": "yellow-cycle-16",
+        "name": "Точка 29",
+        "rail": 335.0,
+        "joints": {
+          "1": 125,
+          "10": 320,
+          "11": 878,
+          "16": 380
+        },
+        "speed_percent": 90,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-16",
+        "block": "transition_common"
+      },
+      {
+        "id": "yellow-cycle-17",
+        "name": "07. Подойти к верхнему пустому контейнеру",
+        "rail": 343.0,
+        "joints": {
+          "1": 500,
+          "10": 435,
+          "11": 705,
+          "16": 608
+        },
+        "speed_percent": 15,
+        "time_ms": 1700,
+        "action": "none",
+        "shared_key": "cycle-17",
+        "group": "empty",
+        "block": "empty_level"
+      },
+      {
+        "id": "yellow-cycle-18",
+        "name": "08. Ввести вилы под пустой контейнер",
+        "rail": 343.0,
+        "joints": {
+          "1": 500,
+          "10": 615,
+          "11": 523,
+          "16": 608
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-18",
+        "group": "empty",
+        "block": "empty_level"
+      },
+      {
+        "id": "yellow-cycle-19",
+        "name": "Точка 28",
+        "rail": 316.0,
+        "joints": {
+          "1": 500,
+          "10": 534,
+          "11": 538,
+          "16": 528
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-19",
+        "group": "empty",
+        "block": "empty_level"
+      },
+      {
+        "id": "yellow-cycle-20",
+        "name": "Точка 29",
+        "rail": 316.0,
+        "joints": {
+          "1": 500,
+          "10": 350,
+          "11": 749,
+          "16": 528
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-20",
+        "group": "empty",
+        "block": "empty_level"
+      },
+      {
+        "id": "yellow-cycle-21",
+        "name": "09. Поджать и поднять пустой контейнер",
+        "rail": 14.0,
+        "joints": {
+          "1": 500,
+          "10": 283,
+          "11": 1000,
+          "16": 343
+        },
+        "speed_percent": 15,
+        "time_ms": 1000,
+        "action": "take_empty",
+        "shared_key": "cycle-21",
+        "block": "return_to_station"
+      },
+      {
+        "id": "yellow-cycle-22",
+        "name": "Точка 16",
+        "rail": 11.0,
+        "joints": {
+          "1": 880,
+          "10": 250,
+          "11": 1000,
+          "16": 374
+        },
+        "speed_percent": 15,
+        "time_ms": 1400,
+        "action": "none",
+        "shared_key": "cycle-22",
+        "block": "delivery_color"
+      },
+      {
+        "id": "yellow-cycle-23",
+        "name": "Точка 17",
+        "rail": 11.0,
+        "joints": {
+          "1": 880,
+          "10": 570,
+          "11": 1000,
+          "16": 102
+        },
+        "speed_percent": 15,
+        "time_ms": 1400,
+        "action": "none",
+        "shared_key": "cycle-23",
+        "block": "delivery_color"
+      },
+      {
+        "id": "yellow-cycle-24",
+        "name": "Точка 18",
+        "rail": 11.0,
+        "joints": {
+          "1": 885,
+          "10": 814,
+          "11": 772,
+          "16": 46
+        },
+        "speed_percent": 15,
+        "time_ms": 1400,
+        "action": "none",
+        "shared_key": "cycle-24",
+        "block": "delivery_color"
+      },
+      {
+        "id": "yellow-cycle-25",
+        "name": "10. Поставить пустой контейнер на станцию",
+        "rail": 11.0,
+        "joints": {
+          "1": 885,
+          "10": 896,
+          "11": 675,
+          "16": 165
+        },
+        "speed_percent": 15,
+        "time_ms": 1800,
+        "action": "place_empty",
+        "shared_key": "cycle-25",
+        "block": "delivery_color"
+      },
+      {
+        "id": "yellow-cycle-26",
+        "name": "11. Вывести вилы из нового контейнера",
+        "rail": 11.0,
+        "joints": {
+          "1": 885,
+          "10": 906,
+          "11": 862,
+          "16": 0
+        },
+        "speed_percent": 15,
+        "time_ms": 1300,
+        "action": "none",
+        "shared_key": "cycle-26",
+        "block": "delivery_color"
+      },
+      {
+        "id": "yellow-cycle-27",
+        "name": "Точка 19",
+        "rail": 11.0,
+        "joints": {
+          "1": 875,
+          "10": 821,
+          "11": 937,
+          "16": 0
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-27",
+        "block": "delivery_color"
+      },
+      {
+        "id": "yellow-cycle-28",
+        "name": "Точка 20",
+        "rail": 11.0,
+        "joints": {
+          "1": 875,
+          "10": 651,
+          "11": 937,
+          "16": 0
+        },
+        "speed_percent": 15,
+        "time_ms": 850,
+        "action": "none",
+        "shared_key": "cycle-28",
+        "block": "delivery_color"
+      },
+      {
+        "id": "yellow-cycle-29",
+        "name": "12. HOME — ожидание",
+        "rail": 0.0,
+        "joints": {
+          "1": 500,
+          "10": 500,
+          "11": 375,
+          "16": 500
+        },
+        "speed_percent": 100,
+        "time_ms": 1600,
+        "action": "none",
+        "shared_key": "cycle-29",
+        "block": "home"
+      }
+    ],
+    "service": []
+  },
+  "profiles": {
+    "red": {
+      "full": {
+        "1": {
+          "5bdddba4bbb94ed18e848f62d3dc8173": {
+            "id": "5bdddba4bbb94ed18e848f62d3dc8173",
+            "name": "Точка 22",
+            "rail": 335.0,
+            "joints": {
+              "1": 125,
+              "10": 719,
+              "11": 830,
+              "16": 26
+            },
+            "speed_percent": 15,
+            "time_ms": 1500,
+            "action": "none",
+            "shared_key": "cycle-09",
+            "group": "full",
+            "block": "full_level"
+          },
+          "f7b1d340fc4f464095c5c9402442e4ec": {
+            "id": "f7b1d340fc4f464095c5c9402442e4ec",
+            "name": "Точка 23",
+            "rail": 335.0,
+            "joints": {
+              "1": 125,
+              "10": 850,
+              "11": 691,
+              "16": 65
+            },
+            "speed_percent": 15,
+            "time_ms": 1800,
+            "action": "none",
+            "shared_key": "cycle-10",
+            "group": "full",
+            "block": "full_level"
+          },
+          "red-05": {
+            "id": "red-05",
+            "name": "05. Поставить полный контейнер в стопку",
+            "rail": 335.0,
+            "joints": {
+              "1": 125,
+              "10": 898,
+              "11": 681,
+              "16": 163
+            },
+            "speed_percent": 15,
+            "time_ms": 2000,
+            "action": "place_full",
+            "shared_key": "cycle-11",
+            "group": "full",
+            "block": "full_level"
+          },
+          "red-06": {
+            "id": "red-06",
+            "name": "06. Вывести вилы из полного контейнера",
+            "rail": 335.0,
+            "joints": {
+              "1": 125,
+              "10": 910,
+              "11": 852,
+              "16": 0
+            },
+            "speed_percent": 15,
+            "time_ms": 1600,
+            "action": "none",
+            "shared_key": "cycle-12",
+            "group": "full",
+            "block": "full_level"
+          },
+          "c8010ce9b9164ffab6cd1a88d59d00f4": {
+            "id": "c8010ce9b9164ffab6cd1a88d59d00f4",
+            "name": "Точка 13",
+            "rail": 335.0,
+            "joints": {
+              "1": 125,
+              "10": 757,
+              "11": 960,
+              "16": 178
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-13",
+            "group": "full",
+            "block": "full_level"
+          },
+          "d50f9f449de94974bfe38d216670504f": {
+            "id": "d50f9f449de94974bfe38d216670504f",
+            "name": "Точка 24",
+            "rail": 335.0,
+            "joints": {
+              "1": 125,
+              "10": 692,
+              "11": 987,
+              "16": 274
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-14",
+            "group": "full",
+            "block": "full_level"
+          },
+          "9420bcb505e1484e852be827ab3aa9b9": {
+            "id": "9420bcb505e1484e852be827ab3aa9b9",
+            "name": "Точка 25",
+            "rail": 335.0,
+            "joints": {
+              "1": 125,
+              "10": 570,
+              "11": 1000,
+              "16": 418
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-15",
+            "group": "full",
+            "block": "full_level"
+          }
+        },
+        "2": {
+          "f7b1d340fc4f464095c5c9402442e4ec": {
+            "id": "f7b1d340fc4f464095c5c9402442e4ec",
+            "name": "Точка 23",
+            "rail": 318.0,
+            "joints": {
+              "1": 142,
+              "10": 780,
+              "11": 779,
+              "16": 184
+            },
+            "speed_percent": 15,
+            "time_ms": 1500,
+            "action": "none",
+            "shared_key": "cycle-10",
+            "group": "full",
+            "block": "full_level"
+          },
+          "red-05": {
+            "id": "red-05",
+            "name": "05. Поставить полный контейнер в стопку",
+            "rail": 315.0,
+            "joints": {
+              "1": 142,
+              "10": 778,
+              "11": 793,
+              "16": 166
+            },
+            "speed_percent": 15,
+            "time_ms": 400,
+            "action": "place_full",
+            "shared_key": "cycle-11",
+            "group": "full",
+            "block": "full_level"
+          },
+          "red-06": {
+            "id": "red-06",
+            "name": "06. Вывести вилы из полного контейнера",
+            "rail": 315.0,
+            "joints": {
+              "1": 125,
+              "10": 771,
+              "11": 950,
+              "16": 11
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-12",
+            "group": "full",
+            "block": "full_level"
+          },
+          "5bdddba4bbb94ed18e848f62d3dc8173": {
+            "id": "5bdddba4bbb94ed18e848f62d3dc8173",
+            "name": "Точка 22",
+            "rail": 318.0,
+            "joints": {
+              "1": 142,
+              "10": 719,
+              "11": 780,
+              "16": 26
+            },
+            "speed_percent": 15,
+            "time_ms": 2300,
+            "action": "none",
+            "shared_key": "cycle-09",
+            "group": "full",
+            "block": "full_level"
+          },
+          "c8010ce9b9164ffab6cd1a88d59d00f4": {
+            "id": "c8010ce9b9164ffab6cd1a88d59d00f4",
+            "name": "Точка 13",
+            "rail": 315.0,
+            "joints": {
+              "1": 125,
+              "10": 757,
+              "11": 960,
+              "16": 178
+            },
+            "speed_percent": 15,
+            "time_ms": 500,
+            "action": "none",
+            "shared_key": "cycle-13",
+            "group": "full",
+            "block": "full_level"
+          },
+          "d50f9f449de94974bfe38d216670504f": {
+            "id": "d50f9f449de94974bfe38d216670504f",
+            "name": "Точка 24",
+            "rail": 315.0,
+            "joints": {
+              "1": 125,
+              "10": 692,
+              "11": 987,
+              "16": 274
+            },
+            "speed_percent": 15,
+            "time_ms": 300,
+            "action": "none",
+            "shared_key": "cycle-14",
+            "group": "full",
+            "block": "full_level"
+          },
+          "9420bcb505e1484e852be827ab3aa9b9": {
+            "id": "9420bcb505e1484e852be827ab3aa9b9",
+            "name": "Точка 25",
+            "rail": 315.0,
+            "joints": {
+              "1": 125,
+              "10": 570,
+              "11": 1000,
+              "16": 418
+            },
+            "speed_percent": 15,
+            "time_ms": 600,
+            "action": "none",
+            "shared_key": "cycle-15",
+            "group": "full",
+            "block": "full_level"
+          }
+        },
+        "3": {
+          "5bdddba4bbb94ed18e848f62d3dc8173": {
+            "id": "5bdddba4bbb94ed18e848f62d3dc8173",
+            "name": "Точка 22",
+            "rail": 320.0,
+            "joints": {
+              "1": 135,
+              "10": 577,
+              "11": 706,
+              "16": 120
+            },
+            "speed_percent": 15,
+            "time_ms": 2200,
+            "action": "none",
+            "shared_key": "cycle-09",
+            "group": "full",
+            "block": "full_level"
+          },
+          "f7b1d340fc4f464095c5c9402442e4ec": {
+            "id": "f7b1d340fc4f464095c5c9402442e4ec",
+            "name": "Точка 23",
+            "rail": 320.0,
+            "joints": {
+              "1": 135,
+              "10": 600,
+              "11": 813,
+              "16": 140
+            },
+            "speed_percent": 15,
+            "time_ms": 1500,
+            "action": "none",
+            "shared_key": "cycle-10",
+            "group": "full",
+            "block": "full_level"
+          },
+          "red-05": {
+            "id": "red-05",
+            "name": "05. Поставить полный контейнер в стопку",
+            "rail": 321.0,
+            "joints": {
+              "1": 135,
+              "10": 673,
+              "11": 819,
+              "16": 261
+            },
+            "speed_percent": 15,
+            "time_ms": 500,
+            "action": "place_full",
+            "shared_key": "cycle-11",
+            "group": "full",
+            "block": "full_level"
+          },
+          "red-06": {
+            "id": "red-06",
+            "name": "06. Вывести вилы из полного контейнера",
+            "rail": 321.0,
+            "joints": {
+              "1": 135,
+              "10": 565,
+              "11": 1000,
+              "16": 176
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-12",
+            "group": "full",
+            "block": "full_level"
+          },
+          "c8010ce9b9164ffab6cd1a88d59d00f4": {
+            "id": "c8010ce9b9164ffab6cd1a88d59d00f4",
+            "name": "Точка 13",
+            "rail": 321.0,
+            "joints": {
+              "1": 135,
+              "10": 475,
+              "11": 1000,
+              "16": 338
+            },
+            "speed_percent": 15,
+            "time_ms": 400,
+            "action": "none",
+            "shared_key": "cycle-13",
+            "group": "full",
+            "block": "full_level"
+          },
+          "d50f9f449de94974bfe38d216670504f": {
+            "id": "d50f9f449de94974bfe38d216670504f",
+            "name": "Точка 24",
+            "rail": 335.0,
+            "joints": {
+              "1": 125,
+              "10": 378,
+              "11": 987,
+              "16": 473
+            },
+            "speed_percent": 15,
+            "time_ms": 400,
+            "action": "none",
+            "shared_key": "cycle-14",
+            "group": "full",
+            "block": "full_level"
+          },
+          "9420bcb505e1484e852be827ab3aa9b9": {
+            "id": "9420bcb505e1484e852be827ab3aa9b9",
+            "name": "Точка 25",
+            "rail": 335.0,
+            "joints": {
+              "1": 125,
+              "10": 307,
+              "11": 1000,
+              "16": 477
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-15",
+            "group": "full",
+            "block": "full_level"
+          }
+        },
+        "4": {
+          "5bdddba4bbb94ed18e848f62d3dc8173": {
+            "id": "5bdddba4bbb94ed18e848f62d3dc8173",
+            "name": "Точка 22",
+            "rail": 320.0,
+            "joints": {
+              "1": 131,
+              "10": 559,
+              "11": 736,
+              "16": 316
+            },
+            "speed_percent": 15,
+            "time_ms": 1500,
+            "action": "none",
+            "shared_key": "cycle-09",
+            "group": "full",
+            "block": "full_level"
+          },
+          "f7b1d340fc4f464095c5c9402442e4ec": {
+            "id": "f7b1d340fc4f464095c5c9402442e4ec",
+            "name": "Точка 23",
+            "rail": 320.0,
+            "joints": {
+              "1": 131,
+              "10": 542,
+              "11": 808,
+              "16": 358
+            },
+            "speed_percent": 15,
+            "time_ms": 1500,
+            "action": "none",
+            "shared_key": "cycle-10",
+            "group": "full",
+            "block": "full_level"
+          },
+          "red-05": {
+            "id": "red-05",
+            "name": "05. Поставить полный контейнер в стопку",
+            "rail": 322.0,
+            "joints": {
+              "1": 131,
+              "10": 542,
+              "11": 808,
+              "16": 358
+            },
+            "speed_percent": 15,
+            "time_ms": 100,
+            "action": "place_full",
+            "shared_key": "cycle-11",
+            "group": "full",
+            "block": "full_level"
+          },
+          "red-06": {
+            "id": "red-06",
+            "name": "06. Вывести вилы из полного контейнера",
+            "rail": 322.0,
+            "joints": {
+              "1": 135,
+              "10": 367,
+              "11": 928,
+              "16": 425
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-12",
+            "group": "full",
+            "block": "full_level"
+          },
+          "c8010ce9b9164ffab6cd1a88d59d00f4": {
+            "id": "c8010ce9b9164ffab6cd1a88d59d00f4",
+            "name": "Точка 13",
+            "rail": 322.0,
+            "joints": {
+              "1": 135,
+              "10": 351,
+              "11": 1000,
+              "16": 406
+            },
+            "speed_percent": 15,
+            "time_ms": 200,
+            "action": "none",
+            "shared_key": "cycle-13",
+            "group": "full",
+            "block": "full_level"
+          },
+          "d50f9f449de94974bfe38d216670504f": {
+            "id": "d50f9f449de94974bfe38d216670504f",
+            "name": "Точка 24",
+            "rail": 322.0,
+            "joints": {
+              "1": 135,
+              "10": 296,
+              "11": 1000,
+              "16": 421
+            },
+            "speed_percent": 45,
+            "time_ms": 200,
+            "action": "none",
+            "shared_key": "cycle-14",
+            "group": "full",
+            "block": "full_level"
+          },
+          "9420bcb505e1484e852be827ab3aa9b9": {
+            "id": "9420bcb505e1484e852be827ab3aa9b9",
+            "name": "Точка 25",
+            "rail": 322.0,
+            "joints": {
+              "1": 135,
+              "10": 269,
+              "11": 1000,
+              "16": 418
+            },
+            "speed_percent": 15,
+            "time_ms": 200,
+            "action": "none",
+            "shared_key": "cycle-15",
+            "group": "full",
+            "block": "full_level"
+          }
+        }
+      },
+      "empty": {
+        "6": {
+          "red-07": {
+            "id": "red-07",
+            "name": "07. Подойти к верхнему пустому контейнеру",
+            "rail": 343.0,
+            "joints": {
+              "1": 506,
+              "10": 431,
+              "11": 688,
+              "16": 559
+            },
+            "speed_percent": 15,
+            "time_ms": 1700,
+            "action": "none",
+            "shared_key": "cycle-17",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "red-08": {
+            "id": "red-08",
+            "name": "08. Ввести вилы под пустой контейнер",
+            "rail": 343.0,
+            "joints": {
+              "1": 506,
+              "10": 605,
+              "11": 521,
+              "16": 615
+            },
+            "speed_percent": 15,
+            "time_ms": 1500,
+            "action": "none",
+            "shared_key": "cycle-18",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "cab0b93f0d324fc7b784a0df12397a45": {
+            "id": "cab0b93f0d324fc7b784a0df12397a45",
+            "name": "Точка 28",
+            "rail": 343.0,
+            "joints": {
+              "1": 500,
+              "10": 534,
+              "11": 497,
+              "16": 528
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-19",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "b1ac55e1807b4807af6f8c345ddffd18": {
+            "id": "b1ac55e1807b4807af6f8c345ddffd18",
+            "name": "Точка 29",
+            "rail": 316.0,
+            "joints": {
+              "1": 500,
+              "10": 279,
+              "11": 757,
+              "16": 528
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-20",
+            "group": "empty",
+            "block": "empty_level"
+          }
+        },
+        "5": {
+          "red-07": {
+            "id": "red-07",
+            "name": "07. Подойти к верхнему пустому контейнеру",
+            "rail": 343.0,
+            "joints": {
+              "1": 506,
+              "10": 397,
+              "11": 805,
+              "16": 483
+            },
+            "speed_percent": 15,
+            "time_ms": 2500,
+            "action": "none",
+            "shared_key": "cycle-17",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "red-08": {
+            "id": "red-08",
+            "name": "08. Ввести вилы под пустой контейнер",
+            "rail": 343.0,
+            "joints": {
+              "1": 506,
+              "10": 572,
+              "11": 652,
+              "16": 470
+            },
+            "speed_percent": 15,
+            "time_ms": 2100,
+            "action": "none",
+            "shared_key": "cycle-18",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "cab0b93f0d324fc7b784a0df12397a45": {
+            "id": "cab0b93f0d324fc7b784a0df12397a45",
+            "name": "Точка 28",
+            "rail": 329.0,
+            "joints": {
+              "1": 500,
+              "10": 525,
+              "11": 644,
+              "16": 370
+            },
+            "speed_percent": 15,
+            "time_ms": 1000,
+            "action": "none",
+            "shared_key": "cycle-19",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "b1ac55e1807b4807af6f8c345ddffd18": {
+            "id": "b1ac55e1807b4807af6f8c345ddffd18",
+            "name": "Точка 29",
+            "rail": 316.0,
+            "joints": {
+              "1": 500,
+              "10": 280,
+              "11": 845,
+              "16": 447
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-20",
+            "group": "empty",
+            "block": "empty_level"
+          }
+        },
+        "4": {
+          "red-07": {
+            "id": "red-07",
+            "name": "07. Подойти к верхнему пустому контейнеру",
+            "rail": 343.0,
+            "joints": {
+              "1": 506,
+              "10": 428,
+              "11": 906,
+              "16": 349
+            },
+            "speed_percent": 15,
+            "time_ms": 1700,
+            "action": "none",
+            "shared_key": "cycle-17",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "red-08": {
+            "id": "red-08",
+            "name": "08. Ввести вилы под пустой контейнер",
+            "rail": 343.0,
+            "joints": {
+              "1": 507,
+              "10": 601,
+              "11": 740,
+              "16": 362
+            },
+            "speed_percent": 15,
+            "time_ms": 2100,
+            "action": "none",
+            "shared_key": "cycle-18",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "cab0b93f0d324fc7b784a0df12397a45": {
+            "id": "cab0b93f0d324fc7b784a0df12397a45",
+            "name": "Точка 28",
+            "rail": 343.0,
+            "joints": {
+              "1": 505,
+              "10": 569,
+              "11": 723,
+              "16": 306
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-19",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "b1ac55e1807b4807af6f8c345ddffd18": {
+            "id": "b1ac55e1807b4807af6f8c345ddffd18",
+            "name": "Точка 29",
+            "rail": 316.0,
+            "joints": {
+              "1": 500,
+              "10": 350,
+              "11": 749,
+              "16": 528
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-20",
+            "group": "empty",
+            "block": "empty_level"
+          }
+        },
+        "3": {
+          "red-07": {
+            "id": "red-07",
+            "name": "07. Подойти к верхнему пустому контейнеру",
+            "rail": 310.0,
+            "joints": {
+              "1": 507,
+              "10": 595,
+              "11": 943,
+              "16": 154
+            },
+            "speed_percent": 15,
+            "time_ms": 1700,
+            "action": "none",
+            "shared_key": "cycle-17",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "red-08": {
+            "id": "red-08",
+            "name": "08. Ввести вилы под пустой контейнер",
+            "rail": 343.0,
+            "joints": {
+              "1": 510,
+              "10": 678,
+              "11": 762,
+              "16": 276
+            },
+            "speed_percent": 15,
+            "time_ms": 1900,
+            "action": "none",
+            "shared_key": "cycle-18",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "cab0b93f0d324fc7b784a0df12397a45": {
+            "id": "cab0b93f0d324fc7b784a0df12397a45",
+            "name": "Точка 28",
+            "rail": 343.0,
+            "joints": {
+              "1": 510,
+              "10": 644,
+              "11": 785,
+              "16": 157
+            },
+            "speed_percent": 15,
+            "time_ms": 1400,
+            "action": "none",
+            "shared_key": "cycle-19",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "b1ac55e1807b4807af6f8c345ddffd18": {
+            "id": "b1ac55e1807b4807af6f8c345ddffd18",
+            "name": "Точка 29",
+            "rail": 316.0,
+            "joints": {
+              "1": 500,
+              "10": 281,
+              "11": 925,
+              "16": 330
+            },
+            "speed_percent": 15,
+            "time_ms": 2000,
+            "action": "none",
+            "shared_key": "cycle-20",
+            "group": "empty",
+            "block": "empty_level"
+          }
+        },
+        "2": {
+          "red-07": {
+            "id": "red-07",
+            "name": "07. Подойти к верхнему пустому контейнеру",
+            "rail": 343.0,
+            "joints": {
+              "1": 506,
+              "10": 764,
+              "11": 949,
+              "16": 0
+            },
+            "speed_percent": 15,
+            "time_ms": 1700,
+            "action": "none",
+            "shared_key": "cycle-17",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "red-08": {
+            "id": "red-08",
+            "name": "08. Ввести вилы под пустой контейнер",
+            "rail": 343.0,
+            "joints": {
+              "1": 506,
+              "10": 791,
+              "11": 720,
+              "16": 211
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-18",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "cab0b93f0d324fc7b784a0df12397a45": {
+            "id": "cab0b93f0d324fc7b784a0df12397a45",
+            "name": "Точка 28",
+            "rail": 343.0,
+            "joints": {
+              "1": 500,
+              "10": 767,
+              "11": 712,
+              "16": 160
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-19",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "b1ac55e1807b4807af6f8c345ddffd18": {
+            "id": "b1ac55e1807b4807af6f8c345ddffd18",
+            "name": "Точка 29",
+            "rail": 343.0,
+            "joints": {
+              "1": 500,
+              "10": 350,
+              "11": 749,
+              "16": 413
+            },
+            "speed_percent": 15,
+            "time_ms": 2200,
+            "action": "none",
+            "shared_key": "cycle-20",
+            "group": "empty",
+            "block": "empty_level"
+          }
+        },
+        "1": {
+          "red-07": {
+            "id": "red-07",
+            "name": "07. Подойти к верхнему пустому контейнеру",
+            "rail": 343.0,
+            "joints": {
+              "1": 517,
+              "10": 928,
+              "11": 803,
+              "16": 19
+            },
+            "speed_percent": 15,
+            "time_ms": 2200,
+            "action": "none",
+            "shared_key": "cycle-17",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "red-08": {
+            "id": "red-08",
+            "name": "08. Ввести вилы под пустой контейнер",
+            "rail": 343.0,
+            "joints": {
+              "1": 518,
+              "10": 929,
+              "11": 652,
+              "16": 194
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-18",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "cab0b93f0d324fc7b784a0df12397a45": {
+            "id": "cab0b93f0d324fc7b784a0df12397a45",
+            "name": "Точка 28",
+            "rail": 343.0,
+            "joints": {
+              "1": 518,
+              "10": 884,
+              "11": 652,
+              "16": 102
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-19",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "b1ac55e1807b4807af6f8c345ddffd18": {
+            "id": "b1ac55e1807b4807af6f8c345ddffd18",
+            "name": "Точка 29",
+            "rail": 316.0,
+            "joints": {
+              "1": 500,
+              "10": 350,
+              "11": 749,
+              "16": 463
+            },
+            "speed_percent": 15,
+            "time_ms": 3100,
+            "action": "none",
+            "shared_key": "cycle-20",
+            "group": "empty",
+            "block": "empty_level"
+          }
+        }
+      }
+    },
+    "green": {
+      "full": {
+        "1": {
+          "green-cycle-09": {
+            "id": "green-cycle-09",
+            "name": "Точка 22",
+            "rail": 175.0,
+            "joints": {
+              "1": 138,
+              "10": 719,
+              "11": 759,
+              "16": 26
+            },
+            "speed_percent": 15,
+            "time_ms": 1500,
+            "action": "none",
+            "shared_key": "cycle-09",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-10": {
+            "id": "green-cycle-10",
+            "name": "Точка 23",
+            "rail": 175.0,
+            "joints": {
+              "1": 138,
+              "10": 850,
+              "11": 680,
+              "16": 65
+            },
+            "speed_percent": 15,
+            "time_ms": 1400,
+            "action": "none",
+            "shared_key": "cycle-10",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-11": {
+            "id": "green-cycle-11",
+            "name": "05. Поставить полный контейнер в стопку",
+            "rail": 175.0,
+            "joints": {
+              "1": 138,
+              "10": 908,
+              "11": 669,
+              "16": 163
+            },
+            "speed_percent": 15,
+            "time_ms": 2200,
+            "action": "place_full",
+            "shared_key": "cycle-11",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-12": {
+            "id": "green-cycle-12",
+            "name": "06. Вывести вилы из полного контейнера",
+            "rail": 180.0,
+            "joints": {
+              "1": 130,
+              "10": 910,
+              "11": 852,
+              "16": 0
+            },
+            "speed_percent": 15,
+            "time_ms": 1600,
+            "action": "none",
+            "shared_key": "cycle-12",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-13": {
+            "id": "green-cycle-13",
+            "name": "Точка 13",
+            "rail": 188.0,
+            "joints": {
+              "1": 125,
+              "10": 757,
+              "11": 960,
+              "16": 178
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-13",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-14": {
+            "id": "green-cycle-14",
+            "name": "Точка 24",
+            "rail": 188.0,
+            "joints": {
+              "1": 125,
+              "10": 692,
+              "11": 987,
+              "16": 274
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-14",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-15": {
+            "id": "green-cycle-15",
+            "name": "Точка 25",
+            "rail": 188.0,
+            "joints": {
+              "1": 125,
+              "10": 570,
+              "11": 1000,
+              "16": 418
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-15",
+            "group": "full",
+            "block": "full_level"
+          }
+        },
+        "2": {
+          "green-cycle-09": {
+            "id": "green-cycle-09",
+            "name": "Точка 22",
+            "rail": 170.0,
+            "joints": {
+              "1": 142,
+              "10": 719,
+              "11": 780,
+              "16": 26
+            },
+            "speed_percent": 15,
+            "time_ms": 2300,
+            "action": "none",
+            "shared_key": "cycle-09",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-10": {
+            "id": "green-cycle-10",
+            "name": "Точка 23",
+            "rail": 170.0,
+            "joints": {
+              "1": 142,
+              "10": 780,
+              "11": 779,
+              "16": 184
+            },
+            "speed_percent": 15,
+            "time_ms": 1500,
+            "action": "none",
+            "shared_key": "cycle-10",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-11": {
+            "id": "green-cycle-11",
+            "name": "05. Поставить полный контейнер в стопку",
+            "rail": 170.0,
+            "joints": {
+              "1": 142,
+              "10": 778,
+              "11": 793,
+              "16": 166
+            },
+            "speed_percent": 15,
+            "time_ms": 400,
+            "action": "place_full",
+            "shared_key": "cycle-11",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-12": {
+            "id": "green-cycle-12",
+            "name": "06. Вывести вилы из полного контейнера",
+            "rail": 171.0,
+            "joints": {
+              "1": 125,
+              "10": 771,
+              "11": 950,
+              "16": 11
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-12",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-13": {
+            "id": "green-cycle-13",
+            "name": "Точка 13",
+            "rail": 188.0,
+            "joints": {
+              "1": 125,
+              "10": 757,
+              "11": 960,
+              "16": 178
+            },
+            "speed_percent": 15,
+            "time_ms": 500,
+            "action": "none",
+            "shared_key": "cycle-13",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-14": {
+            "id": "green-cycle-14",
+            "name": "Точка 24",
+            "rail": 188.0,
+            "joints": {
+              "1": 125,
+              "10": 692,
+              "11": 987,
+              "16": 274
+            },
+            "speed_percent": 15,
+            "time_ms": 300,
+            "action": "none",
+            "shared_key": "cycle-14",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-15": {
+            "id": "green-cycle-15",
+            "name": "Точка 25",
+            "rail": 188.0,
+            "joints": {
+              "1": 125,
+              "10": 570,
+              "11": 1000,
+              "16": 418
+            },
+            "speed_percent": 15,
+            "time_ms": 600,
+            "action": "none",
+            "shared_key": "cycle-15",
+            "group": "full",
+            "block": "full_level"
+          }
+        },
+        "3": {
+          "green-cycle-09": {
+            "id": "green-cycle-09",
+            "name": "Точка 22",
+            "rail": 165.0,
+            "joints": {
+              "1": 135,
+              "10": 577,
+              "11": 706,
+              "16": 120
+            },
+            "speed_percent": 15,
+            "time_ms": 2200,
+            "action": "none",
+            "shared_key": "cycle-09",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-10": {
+            "id": "green-cycle-10",
+            "name": "Точка 23",
+            "rail": 165.0,
+            "joints": {
+              "1": 135,
+              "10": 600,
+              "11": 813,
+              "16": 140
+            },
+            "speed_percent": 15,
+            "time_ms": 1500,
+            "action": "none",
+            "shared_key": "cycle-10",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-11": {
+            "id": "green-cycle-11",
+            "name": "05. Поставить полный контейнер в стопку",
+            "rail": 166.0,
+            "joints": {
+              "1": 135,
+              "10": 673,
+              "11": 819,
+              "16": 261
+            },
+            "speed_percent": 15,
+            "time_ms": 500,
+            "action": "place_full",
+            "shared_key": "cycle-11",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-12": {
+            "id": "green-cycle-12",
+            "name": "06. Вывести вилы из полного контейнера",
+            "rail": 166.0,
+            "joints": {
+              "1": 135,
+              "10": 565,
+              "11": 1000,
+              "16": 176
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-12",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-13": {
+            "id": "green-cycle-13",
+            "name": "Точка 13",
+            "rail": 174.0,
+            "joints": {
+              "1": 135,
+              "10": 475,
+              "11": 1000,
+              "16": 338
+            },
+            "speed_percent": 15,
+            "time_ms": 400,
+            "action": "none",
+            "shared_key": "cycle-13",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-14": {
+            "id": "green-cycle-14",
+            "name": "Точка 24",
+            "rail": 188.0,
+            "joints": {
+              "1": 125,
+              "10": 378,
+              "11": 987,
+              "16": 473
+            },
+            "speed_percent": 15,
+            "time_ms": 400,
+            "action": "none",
+            "shared_key": "cycle-14",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-15": {
+            "id": "green-cycle-15",
+            "name": "Точка 25",
+            "rail": 188.0,
+            "joints": {
+              "1": 125,
+              "10": 307,
+              "11": 1000,
+              "16": 477
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-15",
+            "group": "full",
+            "block": "full_level"
+          }
+        },
+        "4": {
+          "green-cycle-09": {
+            "id": "green-cycle-09",
+            "name": "Точка 22",
+            "rail": 165.0,
+            "joints": {
+              "1": 131,
+              "10": 559,
+              "11": 736,
+              "16": 316
+            },
+            "speed_percent": 15,
+            "time_ms": 1500,
+            "action": "none",
+            "shared_key": "cycle-09",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-10": {
+            "id": "green-cycle-10",
+            "name": "Точка 23",
+            "rail": 165.0,
+            "joints": {
+              "1": 131,
+              "10": 542,
+              "11": 808,
+              "16": 358
+            },
+            "speed_percent": 15,
+            "time_ms": 1500,
+            "action": "none",
+            "shared_key": "cycle-10",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-11": {
+            "id": "green-cycle-11",
+            "name": "05. Поставить полный контейнер в стопку",
+            "rail": 167.0,
+            "joints": {
+              "1": 131,
+              "10": 542,
+              "11": 808,
+              "16": 358
+            },
+            "speed_percent": 15,
+            "time_ms": 100,
+            "action": "place_full",
+            "shared_key": "cycle-11",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-12": {
+            "id": "green-cycle-12",
+            "name": "06. Вывести вилы из полного контейнера",
+            "rail": 167.0,
+            "joints": {
+              "1": 135,
+              "10": 367,
+              "11": 928,
+              "16": 425
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-12",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-13": {
+            "id": "green-cycle-13",
+            "name": "Точка 13",
+            "rail": 175.0,
+            "joints": {
+              "1": 135,
+              "10": 351,
+              "11": 1000,
+              "16": 406
+            },
+            "speed_percent": 15,
+            "time_ms": 200,
+            "action": "none",
+            "shared_key": "cycle-13",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-14": {
+            "id": "green-cycle-14",
+            "name": "Точка 24",
+            "rail": 175.0,
+            "joints": {
+              "1": 135,
+              "10": 296,
+              "11": 1000,
+              "16": 421
+            },
+            "speed_percent": 45,
+            "time_ms": 200,
+            "action": "none",
+            "shared_key": "cycle-14",
+            "group": "full",
+            "block": "full_level"
+          },
+          "green-cycle-15": {
+            "id": "green-cycle-15",
+            "name": "Точка 25",
+            "rail": 175.0,
+            "joints": {
+              "1": 135,
+              "10": 269,
+              "11": 1000,
+              "16": 418
+            },
+            "speed_percent": 15,
+            "time_ms": 200,
+            "action": "none",
+            "shared_key": "cycle-15",
+            "group": "full",
+            "block": "full_level"
+          }
+        }
+      },
+      "empty": {
+        "6": {
+          "green-cycle-17": {
+            "id": "green-cycle-17",
+            "name": "07. Подойти к верхнему пустому контейнеру",
+            "rail": 343.0,
+            "joints": {
+              "1": 506,
+              "10": 431,
+              "11": 688,
+              "16": 559
+            },
+            "speed_percent": 15,
+            "time_ms": 1700,
+            "action": "none",
+            "shared_key": "cycle-17",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "green-cycle-18": {
+            "id": "green-cycle-18",
+            "name": "08. Ввести вилы под пустой контейнер",
+            "rail": 343.0,
+            "joints": {
+              "1": 506,
+              "10": 605,
+              "11": 521,
+              "16": 615
+            },
+            "speed_percent": 15,
+            "time_ms": 1500,
+            "action": "none",
+            "shared_key": "cycle-18",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "green-cycle-19": {
+            "id": "green-cycle-19",
+            "name": "Точка 28",
+            "rail": 343.0,
+            "joints": {
+              "1": 500,
+              "10": 534,
+              "11": 497,
+              "16": 528
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-19",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "green-cycle-20": {
+            "id": "green-cycle-20",
+            "name": "Точка 29",
+            "rail": 316.0,
+            "joints": {
+              "1": 500,
+              "10": 279,
+              "11": 757,
+              "16": 528
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-20",
+            "group": "empty",
+            "block": "empty_level"
+          }
+        },
+        "5": {
+          "green-cycle-17": {
+            "id": "green-cycle-17",
+            "name": "07. Подойти к верхнему пустому контейнеру",
+            "rail": 343.0,
+            "joints": {
+              "1": 506,
+              "10": 397,
+              "11": 805,
+              "16": 483
+            },
+            "speed_percent": 15,
+            "time_ms": 2500,
+            "action": "none",
+            "shared_key": "cycle-17",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "green-cycle-18": {
+            "id": "green-cycle-18",
+            "name": "08. Ввести вилы под пустой контейнер",
+            "rail": 343.0,
+            "joints": {
+              "1": 506,
+              "10": 572,
+              "11": 652,
+              "16": 470
+            },
+            "speed_percent": 15,
+            "time_ms": 2100,
+            "action": "none",
+            "shared_key": "cycle-18",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "green-cycle-19": {
+            "id": "green-cycle-19",
+            "name": "Точка 28",
+            "rail": 343.0,
+            "joints": {
+              "1": 500,
+              "10": 525,
+              "11": 644,
+              "16": 370
+            },
+            "speed_percent": 15,
+            "time_ms": 1000,
+            "action": "none",
+            "shared_key": "cycle-19",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "green-cycle-20": {
+            "id": "green-cycle-20",
+            "name": "Точка 29",
+            "rail": 316.0,
+            "joints": {
+              "1": 500,
+              "10": 280,
+              "11": 845,
+              "16": 447
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-20",
+            "group": "empty",
+            "block": "empty_level"
+          }
+        },
+        "4": {
+          "green-cycle-17": {
+            "id": "green-cycle-17",
+            "name": "07. Подойти к верхнему пустому контейнеру",
+            "rail": 343.0,
+            "joints": {
+              "1": 506,
+              "10": 428,
+              "11": 906,
+              "16": 349
+            },
+            "speed_percent": 15,
+            "time_ms": 1700,
+            "action": "none",
+            "shared_key": "cycle-17",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "green-cycle-18": {
+            "id": "green-cycle-18",
+            "name": "08. Ввести вилы под пустой контейнер",
+            "rail": 343.0,
+            "joints": {
+              "1": 507,
+              "10": 601,
+              "11": 740,
+              "16": 362
+            },
+            "speed_percent": 15,
+            "time_ms": 2100,
+            "action": "none",
+            "shared_key": "cycle-18",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "green-cycle-19": {
+            "id": "green-cycle-19",
+            "name": "Точка 28",
+            "rail": 343.0,
+            "joints": {
+              "1": 505,
+              "10": 569,
+              "11": 723,
+              "16": 306
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-19",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "green-cycle-20": {
+            "id": "green-cycle-20",
+            "name": "Точка 29",
+            "rail": 316.0,
+            "joints": {
+              "1": 500,
+              "10": 350,
+              "11": 749,
+              "16": 528
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-20",
+            "group": "empty",
+            "block": "empty_level"
+          }
+        },
+        "3": {
+          "green-cycle-17": {
+            "id": "green-cycle-17",
+            "name": "07. Подойти к верхнему пустому контейнеру",
+            "rail": 310.0,
+            "joints": {
+              "1": 507,
+              "10": 595,
+              "11": 943,
+              "16": 154
+            },
+            "speed_percent": 15,
+            "time_ms": 1700,
+            "action": "none",
+            "shared_key": "cycle-17",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "green-cycle-18": {
+            "id": "green-cycle-18",
+            "name": "08. Ввести вилы под пустой контейнер",
+            "rail": 343.0,
+            "joints": {
+              "1": 510,
+              "10": 678,
+              "11": 762,
+              "16": 276
+            },
+            "speed_percent": 15,
+            "time_ms": 1900,
+            "action": "none",
+            "shared_key": "cycle-18",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "green-cycle-19": {
+            "id": "green-cycle-19",
+            "name": "Точка 28",
+            "rail": 343.0,
+            "joints": {
+              "1": 510,
+              "10": 644,
+              "11": 785,
+              "16": 157
+            },
+            "speed_percent": 15,
+            "time_ms": 1400,
+            "action": "none",
+            "shared_key": "cycle-19",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "green-cycle-20": {
+            "id": "green-cycle-20",
+            "name": "Точка 29",
+            "rail": 316.0,
+            "joints": {
+              "1": 500,
+              "10": 281,
+              "11": 925,
+              "16": 330
+            },
+            "speed_percent": 15,
+            "time_ms": 2000,
+            "action": "none",
+            "shared_key": "cycle-20",
+            "group": "empty",
+            "block": "empty_level"
+          }
+        },
+        "2": {
+          "green-cycle-17": {
+            "id": "green-cycle-17",
+            "name": "07. Подойти к верхнему пустому контейнеру",
+            "rail": 343.0,
+            "joints": {
+              "1": 506,
+              "10": 764,
+              "11": 949,
+              "16": 0
+            },
+            "speed_percent": 15,
+            "time_ms": 1700,
+            "action": "none",
+            "shared_key": "cycle-17",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "green-cycle-18": {
+            "id": "green-cycle-18",
+            "name": "08. Ввести вилы под пустой контейнер",
+            "rail": 343.0,
+            "joints": {
+              "1": 506,
+              "10": 791,
+              "11": 720,
+              "16": 211
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-18",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "green-cycle-19": {
+            "id": "green-cycle-19",
+            "name": "Точка 28",
+            "rail": 343.0,
+            "joints": {
+              "1": 500,
+              "10": 767,
+              "11": 712,
+              "16": 160
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-19",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "green-cycle-20": {
+            "id": "green-cycle-20",
+            "name": "Точка 29",
+            "rail": 316.0,
+            "joints": {
+              "1": 500,
+              "10": 350,
+              "11": 749,
+              "16": 413
+            },
+            "speed_percent": 15,
+            "time_ms": 2200,
+            "action": "none",
+            "shared_key": "cycle-20",
+            "group": "empty",
+            "block": "empty_level"
+          }
+        },
+        "1": {
+          "green-cycle-17": {
+            "id": "green-cycle-17",
+            "name": "07. Подойти к верхнему пустому контейнеру",
+            "rail": 343.0,
+            "joints": {
+              "1": 517,
+              "10": 928,
+              "11": 803,
+              "16": 19
+            },
+            "speed_percent": 15,
+            "time_ms": 2200,
+            "action": "none",
+            "shared_key": "cycle-17",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "green-cycle-18": {
+            "id": "green-cycle-18",
+            "name": "08. Ввести вилы под пустой контейнер",
+            "rail": 343.0,
+            "joints": {
+              "1": 518,
+              "10": 929,
+              "11": 652,
+              "16": 194
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-18",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "green-cycle-19": {
+            "id": "green-cycle-19",
+            "name": "Точка 28",
+            "rail": 343.0,
+            "joints": {
+              "1": 518,
+              "10": 884,
+              "11": 652,
+              "16": 102
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-19",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "green-cycle-20": {
+            "id": "green-cycle-20",
+            "name": "Точка 29",
+            "rail": 316.0,
+            "joints": {
+              "1": 500,
+              "10": 350,
+              "11": 749,
+              "16": 463
+            },
+            "speed_percent": 15,
+            "time_ms": 3100,
+            "action": "none",
+            "shared_key": "cycle-20",
+            "group": "empty",
+            "block": "empty_level"
+          }
+        }
+      }
+    },
+    "yellow": {
+      "full": {
+        "1": {
+          "yellow-cycle-09": {
+            "id": "yellow-cycle-09",
+            "name": "Точка 22",
+            "rail": 25.0,
+            "joints": {
+              "1": 125,
+              "10": 719,
+              "11": 830,
+              "16": 26
+            },
+            "speed_percent": 15,
+            "time_ms": 1500,
+            "action": "none",
+            "shared_key": "cycle-09",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-10": {
+            "id": "yellow-cycle-10",
+            "name": "Точка 23",
+            "rail": 25.0,
+            "joints": {
+              "1": 125,
+              "10": 850,
+              "11": 691,
+              "16": 65
+            },
+            "speed_percent": 15,
+            "time_ms": 1800,
+            "action": "none",
+            "shared_key": "cycle-10",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-11": {
+            "id": "yellow-cycle-11",
+            "name": "05. Поставить полный контейнер в стопку",
+            "rail": 25.0,
+            "joints": {
+              "1": 125,
+              "10": 898,
+              "11": 681,
+              "16": 163
+            },
+            "speed_percent": 15,
+            "time_ms": 2000,
+            "action": "place_full",
+            "shared_key": "cycle-11",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-12": {
+            "id": "yellow-cycle-12",
+            "name": "06. Вывести вилы из полного контейнера",
+            "rail": 33.0,
+            "joints": {
+              "1": 125,
+              "10": 910,
+              "11": 852,
+              "16": 0
+            },
+            "speed_percent": 15,
+            "time_ms": 1600,
+            "action": "none",
+            "shared_key": "cycle-12",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-13": {
+            "id": "yellow-cycle-13",
+            "name": "Точка 13",
+            "rail": 33.0,
+            "joints": {
+              "1": 125,
+              "10": 757,
+              "11": 960,
+              "16": 178
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-13",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-14": {
+            "id": "yellow-cycle-14",
+            "name": "Точка 24",
+            "rail": 33.0,
+            "joints": {
+              "1": 125,
+              "10": 692,
+              "11": 987,
+              "16": 274
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-14",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-15": {
+            "id": "yellow-cycle-15",
+            "name": "Точка 25",
+            "rail": 33.0,
+            "joints": {
+              "1": 125,
+              "10": 570,
+              "11": 1000,
+              "16": 418
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-15",
+            "group": "full",
+            "block": "full_level"
+          }
+        },
+        "2": {
+          "yellow-cycle-09": {
+            "id": "yellow-cycle-09",
+            "name": "Точка 22",
+            "rail": 15.0,
+            "joints": {
+              "1": 142,
+              "10": 719,
+              "11": 780,
+              "16": 26
+            },
+            "speed_percent": 15,
+            "time_ms": 2300,
+            "action": "none",
+            "shared_key": "cycle-09",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-10": {
+            "id": "yellow-cycle-10",
+            "name": "Точка 23",
+            "rail": 15.0,
+            "joints": {
+              "1": 142,
+              "10": 780,
+              "11": 779,
+              "16": 184
+            },
+            "speed_percent": 15,
+            "time_ms": 1500,
+            "action": "none",
+            "shared_key": "cycle-10",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-11": {
+            "id": "yellow-cycle-11",
+            "name": "05. Поставить полный контейнер в стопку",
+            "rail": 15.0,
+            "joints": {
+              "1": 142,
+              "10": 778,
+              "11": 793,
+              "16": 166
+            },
+            "speed_percent": 15,
+            "time_ms": 400,
+            "action": "place_full",
+            "shared_key": "cycle-11",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-12": {
+            "id": "yellow-cycle-12",
+            "name": "06. Вывести вилы из полного контейнера",
+            "rail": 15.0,
+            "joints": {
+              "1": 125,
+              "10": 771,
+              "11": 950,
+              "16": 11
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-12",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-13": {
+            "id": "yellow-cycle-13",
+            "name": "Точка 13",
+            "rail": 33.0,
+            "joints": {
+              "1": 125,
+              "10": 757,
+              "11": 960,
+              "16": 178
+            },
+            "speed_percent": 15,
+            "time_ms": 500,
+            "action": "none",
+            "shared_key": "cycle-13",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-14": {
+            "id": "yellow-cycle-14",
+            "name": "Точка 24",
+            "rail": 33.0,
+            "joints": {
+              "1": 125,
+              "10": 692,
+              "11": 987,
+              "16": 274
+            },
+            "speed_percent": 15,
+            "time_ms": 300,
+            "action": "none",
+            "shared_key": "cycle-14",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-15": {
+            "id": "yellow-cycle-15",
+            "name": "Точка 25",
+            "rail": 33.0,
+            "joints": {
+              "1": 125,
+              "10": 570,
+              "11": 1000,
+              "16": 418
+            },
+            "speed_percent": 15,
+            "time_ms": 600,
+            "action": "none",
+            "shared_key": "cycle-15",
+            "group": "full",
+            "block": "full_level"
+          }
+        },
+        "3": {
+          "yellow-cycle-09": {
+            "id": "yellow-cycle-09",
+            "name": "Точка 22",
+            "rail": 15.0,
+            "joints": {
+              "1": 135,
+              "10": 577,
+              "11": 706,
+              "16": 120
+            },
+            "speed_percent": 15,
+            "time_ms": 2200,
+            "action": "none",
+            "shared_key": "cycle-09",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-10": {
+            "id": "yellow-cycle-10",
+            "name": "Точка 23",
+            "rail": 15.0,
+            "joints": {
+              "1": 135,
+              "10": 600,
+              "11": 813,
+              "16": 140
+            },
+            "speed_percent": 15,
+            "time_ms": 1500,
+            "action": "none",
+            "shared_key": "cycle-10",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-11": {
+            "id": "yellow-cycle-11",
+            "name": "05. Поставить полный контейнер в стопку",
+            "rail": 15.0,
+            "joints": {
+              "1": 135,
+              "10": 673,
+              "11": 819,
+              "16": 261
+            },
+            "speed_percent": 15,
+            "time_ms": 500,
+            "action": "place_full",
+            "shared_key": "cycle-11",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-12": {
+            "id": "yellow-cycle-12",
+            "name": "06. Вывести вилы из полного контейнера",
+            "rail": 15.0,
+            "joints": {
+              "1": 135,
+              "10": 565,
+              "11": 1000,
+              "16": 176
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-12",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-13": {
+            "id": "yellow-cycle-13",
+            "name": "Точка 13",
+            "rail": 19.0,
+            "joints": {
+              "1": 135,
+              "10": 475,
+              "11": 1000,
+              "16": 338
+            },
+            "speed_percent": 15,
+            "time_ms": 400,
+            "action": "none",
+            "shared_key": "cycle-13",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-14": {
+            "id": "yellow-cycle-14",
+            "name": "Точка 24",
+            "rail": 33.0,
+            "joints": {
+              "1": 125,
+              "10": 378,
+              "11": 987,
+              "16": 473
+            },
+            "speed_percent": 15,
+            "time_ms": 400,
+            "action": "none",
+            "shared_key": "cycle-14",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-15": {
+            "id": "yellow-cycle-15",
+            "name": "Точка 25",
+            "rail": 33.0,
+            "joints": {
+              "1": 125,
+              "10": 307,
+              "11": 1000,
+              "16": 477
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-15",
+            "group": "full",
+            "block": "full_level"
+          }
+        },
+        "4": {
+          "yellow-cycle-09": {
+            "id": "yellow-cycle-09",
+            "name": "Точка 22",
+            "rail": 15.0,
+            "joints": {
+              "1": 131,
+              "10": 559,
+              "11": 736,
+              "16": 316
+            },
+            "speed_percent": 15,
+            "time_ms": 1500,
+            "action": "none",
+            "shared_key": "cycle-09",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-10": {
+            "id": "yellow-cycle-10",
+            "name": "Точка 23",
+            "rail": 15.0,
+            "joints": {
+              "1": 131,
+              "10": 542,
+              "11": 808,
+              "16": 358
+            },
+            "speed_percent": 15,
+            "time_ms": 1500,
+            "action": "none",
+            "shared_key": "cycle-10",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-11": {
+            "id": "yellow-cycle-11",
+            "name": "05. Поставить полный контейнер в стопку",
+            "rail": 15.0,
+            "joints": {
+              "1": 131,
+              "10": 542,
+              "11": 808,
+              "16": 358
+            },
+            "speed_percent": 15,
+            "time_ms": 100,
+            "action": "place_full",
+            "shared_key": "cycle-11",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-12": {
+            "id": "yellow-cycle-12",
+            "name": "06. Вывести вилы из полного контейнера",
+            "rail": 15.0,
+            "joints": {
+              "1": 135,
+              "10": 367,
+              "11": 928,
+              "16": 425
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-12",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-13": {
+            "id": "yellow-cycle-13",
+            "name": "Точка 13",
+            "rail": 20.0,
+            "joints": {
+              "1": 135,
+              "10": 351,
+              "11": 1000,
+              "16": 406
+            },
+            "speed_percent": 15,
+            "time_ms": 200,
+            "action": "none",
+            "shared_key": "cycle-13",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-14": {
+            "id": "yellow-cycle-14",
+            "name": "Точка 24",
+            "rail": 20.0,
+            "joints": {
+              "1": 135,
+              "10": 296,
+              "11": 1000,
+              "16": 421
+            },
+            "speed_percent": 45,
+            "time_ms": 200,
+            "action": "none",
+            "shared_key": "cycle-14",
+            "group": "full",
+            "block": "full_level"
+          },
+          "yellow-cycle-15": {
+            "id": "yellow-cycle-15",
+            "name": "Точка 25",
+            "rail": 20.0,
+            "joints": {
+              "1": 135,
+              "10": 269,
+              "11": 1000,
+              "16": 418
+            },
+            "speed_percent": 15,
+            "time_ms": 200,
+            "action": "none",
+            "shared_key": "cycle-15",
+            "group": "full",
+            "block": "full_level"
+          }
+        }
+      },
+      "empty": {
+        "6": {
+          "yellow-cycle-17": {
+            "id": "yellow-cycle-17",
+            "name": "07. Подойти к верхнему пустому контейнеру",
+            "rail": 343.0,
+            "joints": {
+              "1": 506,
+              "10": 431,
+              "11": 688,
+              "16": 559
+            },
+            "speed_percent": 15,
+            "time_ms": 1700,
+            "action": "none",
+            "shared_key": "cycle-17",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "yellow-cycle-18": {
+            "id": "yellow-cycle-18",
+            "name": "08. Ввести вилы под пустой контейнер",
+            "rail": 343.0,
+            "joints": {
+              "1": 506,
+              "10": 605,
+              "11": 521,
+              "16": 615
+            },
+            "speed_percent": 15,
+            "time_ms": 1500,
+            "action": "none",
+            "shared_key": "cycle-18",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "yellow-cycle-19": {
+            "id": "yellow-cycle-19",
+            "name": "Точка 28",
+            "rail": 343.0,
+            "joints": {
+              "1": 500,
+              "10": 534,
+              "11": 497,
+              "16": 528
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-19",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "yellow-cycle-20": {
+            "id": "yellow-cycle-20",
+            "name": "Точка 29",
+            "rail": 316.0,
+            "joints": {
+              "1": 500,
+              "10": 279,
+              "11": 757,
+              "16": 528
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-20",
+            "group": "empty",
+            "block": "empty_level"
+          }
+        },
+        "5": {
+          "yellow-cycle-17": {
+            "id": "yellow-cycle-17",
+            "name": "07. Подойти к верхнему пустому контейнеру",
+            "rail": 343.0,
+            "joints": {
+              "1": 506,
+              "10": 397,
+              "11": 805,
+              "16": 483
+            },
+            "speed_percent": 15,
+            "time_ms": 2500,
+            "action": "none",
+            "shared_key": "cycle-17",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "yellow-cycle-18": {
+            "id": "yellow-cycle-18",
+            "name": "08. Ввести вилы под пустой контейнер",
+            "rail": 343.0,
+            "joints": {
+              "1": 506,
+              "10": 572,
+              "11": 652,
+              "16": 470
+            },
+            "speed_percent": 15,
+            "time_ms": 2100,
+            "action": "none",
+            "shared_key": "cycle-18",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "yellow-cycle-19": {
+            "id": "yellow-cycle-19",
+            "name": "Точка 28",
+            "rail": 343.0,
+            "joints": {
+              "1": 500,
+              "10": 525,
+              "11": 644,
+              "16": 370
+            },
+            "speed_percent": 15,
+            "time_ms": 1000,
+            "action": "none",
+            "shared_key": "cycle-19",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "yellow-cycle-20": {
+            "id": "yellow-cycle-20",
+            "name": "Точка 29",
+            "rail": 316.0,
+            "joints": {
+              "1": 500,
+              "10": 280,
+              "11": 845,
+              "16": 447
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-20",
+            "group": "empty",
+            "block": "empty_level"
+          }
+        },
+        "4": {
+          "yellow-cycle-17": {
+            "id": "yellow-cycle-17",
+            "name": "07. Подойти к верхнему пустому контейнеру",
+            "rail": 343.0,
+            "joints": {
+              "1": 506,
+              "10": 428,
+              "11": 906,
+              "16": 349
+            },
+            "speed_percent": 15,
+            "time_ms": 1700,
+            "action": "none",
+            "shared_key": "cycle-17",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "yellow-cycle-18": {
+            "id": "yellow-cycle-18",
+            "name": "08. Ввести вилы под пустой контейнер",
+            "rail": 343.0,
+            "joints": {
+              "1": 507,
+              "10": 601,
+              "11": 740,
+              "16": 362
+            },
+            "speed_percent": 15,
+            "time_ms": 2100,
+            "action": "none",
+            "shared_key": "cycle-18",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "yellow-cycle-19": {
+            "id": "yellow-cycle-19",
+            "name": "Точка 28",
+            "rail": 343.0,
+            "joints": {
+              "1": 505,
+              "10": 569,
+              "11": 723,
+              "16": 306
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-19",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "yellow-cycle-20": {
+            "id": "yellow-cycle-20",
+            "name": "Точка 29",
+            "rail": 316.0,
+            "joints": {
+              "1": 500,
+              "10": 350,
+              "11": 749,
+              "16": 528
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-20",
+            "group": "empty",
+            "block": "empty_level"
+          }
+        },
+        "3": {
+          "yellow-cycle-17": {
+            "id": "yellow-cycle-17",
+            "name": "07. Подойти к верхнему пустому контейнеру",
+            "rail": 310.0,
+            "joints": {
+              "1": 507,
+              "10": 595,
+              "11": 943,
+              "16": 154
+            },
+            "speed_percent": 15,
+            "time_ms": 1700,
+            "action": "none",
+            "shared_key": "cycle-17",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "yellow-cycle-18": {
+            "id": "yellow-cycle-18",
+            "name": "08. Ввести вилы под пустой контейнер",
+            "rail": 343.0,
+            "joints": {
+              "1": 510,
+              "10": 678,
+              "11": 762,
+              "16": 276
+            },
+            "speed_percent": 15,
+            "time_ms": 1900,
+            "action": "none",
+            "shared_key": "cycle-18",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "yellow-cycle-19": {
+            "id": "yellow-cycle-19",
+            "name": "Точка 28",
+            "rail": 343.0,
+            "joints": {
+              "1": 510,
+              "10": 644,
+              "11": 785,
+              "16": 157
+            },
+            "speed_percent": 15,
+            "time_ms": 1400,
+            "action": "none",
+            "shared_key": "cycle-19",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "yellow-cycle-20": {
+            "id": "yellow-cycle-20",
+            "name": "Точка 29",
+            "rail": 316.0,
+            "joints": {
+              "1": 500,
+              "10": 281,
+              "11": 925,
+              "16": 330
+            },
+            "speed_percent": 15,
+            "time_ms": 2000,
+            "action": "none",
+            "shared_key": "cycle-20",
+            "group": "empty",
+            "block": "empty_level"
+          }
+        },
+        "2": {
+          "yellow-cycle-17": {
+            "id": "yellow-cycle-17",
+            "name": "07. Подойти к верхнему пустому контейнеру",
+            "rail": 343.0,
+            "joints": {
+              "1": 506,
+              "10": 764,
+              "11": 949,
+              "16": 0
+            },
+            "speed_percent": 15,
+            "time_ms": 1700,
+            "action": "none",
+            "shared_key": "cycle-17",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "yellow-cycle-18": {
+            "id": "yellow-cycle-18",
+            "name": "08. Ввести вилы под пустой контейнер",
+            "rail": 343.0,
+            "joints": {
+              "1": 506,
+              "10": 791,
+              "11": 720,
+              "16": 211
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-18",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "yellow-cycle-19": {
+            "id": "yellow-cycle-19",
+            "name": "Точка 28",
+            "rail": 343.0,
+            "joints": {
+              "1": 500,
+              "10": 767,
+              "11": 712,
+              "16": 160
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-19",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "yellow-cycle-20": {
+            "id": "yellow-cycle-20",
+            "name": "Точка 29",
+            "rail": 316.0,
+            "joints": {
+              "1": 500,
+              "10": 350,
+              "11": 749,
+              "16": 413
+            },
+            "speed_percent": 15,
+            "time_ms": 2200,
+            "action": "none",
+            "shared_key": "cycle-20",
+            "group": "empty",
+            "block": "empty_level"
+          }
+        },
+        "1": {
+          "yellow-cycle-17": {
+            "id": "yellow-cycle-17",
+            "name": "07. Подойти к верхнему пустому контейнеру",
+            "rail": 343.0,
+            "joints": {
+              "1": 517,
+              "10": 928,
+              "11": 803,
+              "16": 19
+            },
+            "speed_percent": 15,
+            "time_ms": 2200,
+            "action": "none",
+            "shared_key": "cycle-17",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "yellow-cycle-18": {
+            "id": "yellow-cycle-18",
+            "name": "08. Ввести вилы под пустой контейнер",
+            "rail": 343.0,
+            "joints": {
+              "1": 518,
+              "10": 929,
+              "11": 652,
+              "16": 194
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-18",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "yellow-cycle-19": {
+            "id": "yellow-cycle-19",
+            "name": "Точка 28",
+            "rail": 343.0,
+            "joints": {
+              "1": 518,
+              "10": 884,
+              "11": 652,
+              "16": 102
+            },
+            "speed_percent": 15,
+            "time_ms": 850,
+            "action": "none",
+            "shared_key": "cycle-19",
+            "group": "empty",
+            "block": "empty_level"
+          },
+          "yellow-cycle-20": {
+            "id": "yellow-cycle-20",
+            "name": "Точка 29",
+            "rail": 316.0,
+            "joints": {
+              "1": 500,
+              "10": 350,
+              "11": 749,
+              "16": 463
+            },
+            "speed_percent": 15,
+            "time_ms": 3100,
+            "action": "none",
+            "shared_key": "cycle-20",
+            "group": "empty",
+            "block": "empty_level"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}обзор{% endblock %}
+{% block header %}Обзор системы{% endblock %}
+{% block content %}
+<section class="hero-card">
+    <div><span class="eyebrow">ТЕКУЩАЯ СМЕНА</span><h2>Линия готова к запуску</h2><p>Система сортирует яблоки по цвету и распределяет их по контейнерам.</p><div class="hero-buttons"><button class="quiet-button" id="restart-system">Перезагрузить систему</button><a class="quiet-button" href="{{ url_for('vision') }}">Открыть распознавание →</a></div></div>
+    <div class="hero-badge"><span class="big-number" id="hero-total">0</span><span>яблок обработано</span></div>
+</section>
+
+<section class="metrics-grid compact-metrics">
+    <div class="metric-card"><span>Манипулятор</span><strong id="metric-arm">Неактивен</strong><small><i class="dot gray" id="metric-arm-dot"></i>состояние</small></div>
+    <div class="metric-card"><span>Конвейер</span><strong id="metric-conveyor">Неактивен</strong><small><i class="dot gray" id="metric-conveyor-dot"></i>состояние</small></div>
+    <div class="metric-card"><span>Компьютерное зрение</span><strong id="metric-vision">Неактивно</strong><small><i class="dot gray" id="metric-vision-dot"></i>состояние</small></div>
+</section>
+
+<section class="dashboard-grid dashboard-twin-grid">
+    <div class="panel dashboard-twin-panel">
+        <div class="dashboard-twin-head">
+            <div><h3>Цифровой двойник комплекса</h3><p>Вращайте модель мышью или пальцем, меняйте ракурс и масштаб.</p></div>
+            <span class="status-chip inactive" id="dashboard-twin-status" aria-live="polite">загрузка 3D</span>
+        </div>
+        <iframe id="dashboard-twin-frame" class="dashboard-twin-frame" title="Интерактивный трёхмерный вид комплекса BERETS" src="{{ url_for('static', filename='digital_twin/index.html') }}?embed=1&amp;surface=dashboard&amp;v=20260910-dashboard3d"></iframe>
+    </div>
+    <div class="panel mode-panel">
+        <div class="panel-head"><div><span class="eyebrow">РЕЖИМ</span><h3>Сортировка яблок по цветам</h3></div><span class="status-chip" id="system-mode-status">неактивен</span></div>
+        <div class="mode-description">Распознавание цвета, подхват яблока и укладка в соответствующий контейнер.</div>
+        <div class="info-list"><div><span>Последнее событие</span><b id="last-event">—</b></div><div><span>Текущий оператор</span><b id="current-operator">не назначен</b></div><div><span>Состояние системы</span><b id="mode-system-state">ожидание запуска</b></div></div>
+    </div>
+</section>
+
+<section class="bottom-grid">
+    <div class="panel"><div class="panel-head"><div><span class="eyebrow">ОБЪЕКТЫ</span><h3>Распределение яблок</h3></div><a href="{{ url_for('vision') }}" class="panel-link">Подробнее →</a></div><div class="bar-list"><div><span><i class="apple red"></i>Красные</span><b id="dash-count-red">0</b></div><div><span><i class="apple green"></i>Зелёные</span><b id="dash-count-green">0</b></div><div><span><i class="apple yellow"></i>Жёлтые</span><b id="dash-count-yellow">0</b></div></div></div>
+    <div class="panel"><div class="panel-head"><div><span class="eyebrow">ЖУРНАЛ</span><h3>Последние события</h3></div><a href="{{ url_for('system') }}" class="panel-link">Весь журнал →</a></div><div id="dashboard-log" class="compact-log"></div></div>
+</section>
+{% endblock %}

@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% block title %}конвейер{% endblock %}
+{% block header %}Конвейер{% endblock %}
+{% block content %}
+<div class="page-intro simple-intro"><h2>Конвейерная линия</h2></div>
+
+<section class="control-layout">
+    <div class="panel belt-panel">
+        <div class="panel-head"><div><span class="eyebrow">СХЕМА</span><h3>Вид сверху</h3></div></div>
+        {% include '_cell_scheme.html' %}
+        <div class="belt-current"><span>На ленте</span><b id="belt-current-apple">яблок нет</b></div>
+    </div>
+    <div class="panel">
+        <div class="panel-head"><div><span class="eyebrow">УПРАВЛЕНИЕ</span><h3>Управление конвейерной лентой</h3></div><span class="status-chip" id="conveyor-state">неактивна</span></div>
+        <div class="split-actions"><button class="primary-button" data-conveyor="start">Запустить</button><button class="quiet-button" data-conveyor="stop">Остановить</button></div>
+        <div class="divider"></div>
+        <div class="panel-head">
+            <div><span class="eyebrow">ДОЗАТОР ID 6</span><h3>Автоматическая подача</h3></div>
+            <span class="status-chip" id="dispenser-state">остановлен</span>
+        </div>
+        <div class="split-actions">
+            <button class="primary-button" data-dispenser="start">Запустить дозатор</button>
+            <button class="quiet-button" data-dispenser="stop">Остановить дозатор</button>
+        </div>
+        <div class="speed-value"><span>Скорость подачи</span><strong><span id="dispenser-rate-number">10</span> яблок/мин</strong></div>
+        <input id="dispenser-rate" class="big-slider" type="range" min="1" max="10" step="1" value="10">
+        <div class="info-list">
+            <div><span>Период цикла</span><b><span id="dispenser-cycle-seconds">6,0</span> с</b></div>
+            <div><span>Подача</span><b><span id="dosage-rate-text">10</span> яблок/мин</b></div>
+            <div><span>Фаза</span><b id="dispenser-phase">остановлен</b></div>
+            <div><span>Позиция ID6</span><b id="dispenser-position">500</b></div>
+            <div><span>Лента</span><b id="belt-state-text">остановлена</b></div>
+        </div>
+    </div>
+</section>
+
+<section class="panel">
+    <div class="panel-head">
+        <div>
+            <span class="eyebrow">РУЧНОЕ УПРАВЛЕНИЕ</span>
+            <h3>Заслонки и дозатор</h3>
+        </div>
+        <span class="tag">UART · безопасные пределы</span>
+    </div>
+    <div class="preset-control-list">
+        <div class="preset-control-row">
+            <div class="joint-title"><b>ID 3</b><span>Жёлтая · третья от дозатора</span></div>
+            <div class="split-actions">
+                <button class="quiet-button" data-gate-preset="open" data-gate-id="3">Открыть · 500</button>
+                <button class="quiet-button" data-gate-preset="closed" data-gate-id="3">Закрыть · 690</button>
+            </div>
+            <output class="joint-value" data-aux-output="3">500</output>
+        </div>
+        <div class="preset-control-row">
+            <div class="joint-title"><b>ID 4</b><span>Красная · первая от дозатора</span></div>
+            <div class="split-actions">
+                <button class="quiet-button" data-gate-preset="open" data-gate-id="4">Открыть · 500</button>
+                <button class="quiet-button" data-gate-preset="closed" data-gate-id="4">Закрыть · 690</button>
+            </div>
+            <output class="joint-value" data-aux-output="4">500</output>
+        </div>
+        <div class="preset-control-row">
+            <div class="joint-title"><b>ID 5</b><span>Зелёная · вторая от дозатора</span></div>
+            <div class="split-actions">
+                <button class="quiet-button" data-gate-preset="open" data-gate-id="5">Открыть · 500</button>
+                <button class="quiet-button" data-gate-preset="closed" data-gate-id="5">Закрыть · 690</button>
+            </div>
+            <output class="joint-value" data-aux-output="5">500</output>
+        </div>
+        <div class="preset-control-row">
+            <div class="joint-title"><b>ID 6</b><span>Дозатор</span></div>
+            <div class="split-actions">
+                <button class="quiet-button" data-dispenser-preset="capture">Захват яблока · 500</button>
+                <button class="quiet-button" data-dispenser-preset="feed">Подать на конвейер · 200</button>
+            </div>
+            <output class="joint-value" data-aux-output="6">500</output>
+        </div>
+    </div>
+    <p class="rail-explanation">
+        Перед ручной проверкой уберите яблоки и запускайте только один привод за раз.
+    </p>
+</section>
+
+<section class="panel">
+    <div class="panel-head">
+        <div><span class="eyebrow">ЗОННАЯ СОРТИРОВКА</span><h3>Автоматическое управление заслонками</h3></div>
+        <span class="status-chip" id="zone-sorting-state">остановлена</span>
+    </div>
+    <div class="split-actions">
+        <button class="primary-button" data-zone-sorting="start">Включить отслеживание зон</button>
+        <button class="quiet-button" data-zone-sorting="stop">Остановить и открыть заслонки</button>
+    </div>
+    <div class="info-list">
+        <div><span>Фаза</span><b id="zone-sorting-phase">остановлена</b></div>
+        <div><span>Активные треки</span><b id="zone-active-tracks">0</b></div>
+        <div><span>Ошибка</span><b id="zone-sorting-fault">—</b></div>
+    </div>
+</section>
+
+<section class="panel"><div class="panel-head"><div><span class="eyebrow">НАКОПИТЕЛИ</span><h3>Контейнеры сортировки</h3></div></div><div class="bin-grid three-bins"><div class="bin-card red-border"><i class="apple red"></i><b>Красные</b><span>заполненность контейнера</span><strong><span id="bin-red">0</span> / 2 яблока</strong><button class="quiet-button bin-exchange-button" data-manual-exchange="red">Заменить заполненный</button></div><div class="bin-card green-border"><i class="apple green"></i><b>Зелёные</b><span>заполненность контейнера</span><strong><span id="bin-green">0</span> / 2 яблока</strong><button class="quiet-button bin-exchange-button" data-manual-exchange="green">Заменить заполненный</button></div><div class="bin-card yellow-border"><i class="apple yellow"></i><b>Жёлтые</b><span>заполненность контейнера</span><strong><span id="bin-yellow">0</span> / 2 яблока</strong><button class="quiet-button bin-exchange-button" data-manual-exchange="yellow">Заменить заполненный</button></div></div></section>
+
+<section class="panel stack-panel"><div class="panel-head"><div><span class="eyebrow">СТОПКА КОНТЕЙНЕРОВ</span><h3>Заполненные и пустые контейнеры</h3></div></div><div class="stack-grid"><div class="stack-card empty"><div class="stack-visual" id="empty-stack-visual"></div><b>Пустые</b><strong><span id="empty-stack-count">0</span> / 6</strong><small>контейнеров в стопке</small></div><div class="stack-card"><div class="stack-visual color-red" id="full-red-visual"></div><b>Красные</b><strong><span id="full-red-count">0</span></strong><small>заполненных контейнеров</small></div><div class="stack-card"><div class="stack-visual color-green" id="full-green-visual"></div><b>Зелёные</b><strong><span id="full-green-count">0</span></strong><small>заполненных контейнеров</small></div><div class="stack-card"><div class="stack-visual color-yellow" id="full-yellow-visual"></div><b>Жёлтые</b><strong><span id="full-yellow-count">0</span></strong><small>заполненных контейнеров</small></div></div></section>
+{% endblock %}

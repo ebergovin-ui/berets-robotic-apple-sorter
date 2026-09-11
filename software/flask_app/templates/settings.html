@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block title %}настройки{% endblock %}
+{% block header %}Настройки{% endblock %}
+{% block content %}
+<div class="page-intro simple-intro"><h2>Настройки панели</h2><p class="page-subtitle">Параметры отображения и управление доступом сотрудников.</p></div>
+
+<section class="settings-grid">
+    <div class="panel settings-panel">
+        <div class="panel-head"><div><span class="eyebrow">ВИД И ЯЗЫК</span><h3>Параметры интерфейса</h3></div></div>
+        <label class="settings-field">Тема<select id="setting-theme"><option value="light">Светлая</option><option value="dark">Тёмная</option></select></label>
+        <label class="settings-field">Язык<select id="setting-language"><option value="ru">Русский</option><option value="en">English</option></select></label>
+        <div class="settings-note">Выбор сохраняется в браузере этого устройства и не меняет настройки оборудования.</div>
+    </div>
+    <div class="panel settings-panel voice-settings-panel">
+        <div class="panel-head"><div><span class="eyebrow">ОПОВЕЩЕНИЯ</span><h3>Голос оператора</h3></div><span id="voice-status" class="tag">проверка</span></div>
+        <label class="voice-setting-toggle"><input id="voice-enabled" type="checkbox"><span><b>Озвучивать активные уведомления</b><small>Настройка хранится только в этом браузере.</small></span></label>
+        <label class="settings-field">Голос<select id="voice-select"></select></label>
+        <label class="settings-field">Манера речи<select id="voice-style"></select></label>
+        <div class="voice-settings-actions"><button id="voice-test" class="quiet-button" type="button">Проверить выбранный</button><button id="voice-audition" class="primary-button" type="button">Прослушать 10 вариантов</button></div>
+        <div id="voice-audition-status" class="voice-audition-status" aria-live="polite">Каждый вариант произнесёт свой номер и фразу «Привет, Егор».</div>
+        <div id="voice-settings-note" class="settings-note">При наличии RHVoice он будет выбран автоматически; иначе используется доступный русский системный голос.</div>
+    </div>
+    <div class="panel settings-panel security-settings-panel">
+        <div class="panel-head"><div><span class="eyebrow">КОНТУР ЗАЩИТЫ</span><h3>Безопасность панели</h3></div><span class="tag">активна</span></div>
+        <div class="security-status-list">
+            <div><span class="security-status-dot"></span><span><b>Двухэтапный вход и роли</b><small>Общий пароль, личный профиль, права оператора.</small></span></div>
+            <div><span class="security-status-dot {{ '' if security_status.csrf else 'warning' }}"></span><span><b>Защита команд браузера</b><small>CSRF и политика загрузки ресурсов.</small></span></div>
+            <div><span class="security-status-dot {{ '' if security_status.vision_token else 'warning' }}"></span><span><b>Канал компьютерного зрения</b><small>{{ 'Отдельный токен настроен.' if security_status.vision_token else 'Токен будет создан установщиком на Raspberry.' }}</small></span></div>
+            <div><span class="security-status-dot {{ '' if security_status.secure_cookie else 'warning' }}"></span><span><b>Сессия до {{ security_status.session_hours }} часов</b><small>{{ 'Cookie защищена HTTPS.' if security_status.secure_cookie else 'Режим локальной HTTP-сети; Secure-cookie включится после HTTPS.' }}</small></span></div>
+        </div>
+    </div>
+    <div class="panel settings-panel">
+        <div class="panel-head"><div><span class="eyebrow">СОРТИРОВКА</span><h3>Остановка заполненного контейнера</h3></div></div>
+        <form id="runtime-settings-form" class="settings-form">
+            <label class="settings-field">Задержка после заполнения, с<input id="full-stop-delay" type="number" min="0.1" max="10" step="0.1" value="0.1" required {% if current_user.role == 'viewer' %}disabled{% endif %}></label>
+            <label class="settings-field">Максимальная частота STEP рельсы, имп/с<input id="rail-max-speed" type="number" min="1" max="100000" step="1" value="2000" required {% if current_user.role == 'viewer' %}disabled{% endif %}></label>
+            {% if current_user.role != 'viewer' %}<button class="primary-button" type="submit">Сохранить параметры</button>{% endif %}
+        </form>
+        <div class="settings-note">Задержка: 0,1–10 секунд. Для рельсы скорость 100% соответствует указанной максимальной частоте STEP; 50% — её половине. Количество импульсов перемещения по-прежнему определяется расстоянием и калибровкой 40 имп/мм.</div>
+    </div>
+    <div class="panel settings-panel">
+        <div class="panel-head"><div><span class="eyebrow">ПАРОЛЬ</span><h3>Изменить свой пароль</h3></div></div>
+        <form id="password-form" class="settings-form">
+            <label class="settings-field">Текущий пароль<input id="password-current" type="password" required></label>
+            <label class="settings-field">Новый пароль<input id="password-new" type="password" minlength="6" required></label>
+            <label class="settings-field">Повторите новый пароль<input id="password-confirm" type="password" minlength="6" required></label>
+            <button class="primary-button" type="submit">Сохранить пароль</button>
+        </form>
+    </div>
+</section>
+
+{% if current_user.role == 'admin' %}
+<section class="panel account-panel">
+    <div class="panel-head"><div><span class="eyebrow">ДОСТУП СОТРУДНИКОВ</span><h3>Учётные записи</h3></div><span class="tag">администратор</span></div>
+    <form id="account-create-form" class="account-create-form">
+        <label class="settings-field">Логин<input id="account-username" required pattern="[A-Za-z0-9_.-]{3,32}"></label>
+        <label class="settings-field">Имя сотрудника<input id="account-display-name" required></label>
+        <label class="settings-field">Роль<select id="account-role"><option value="operator">Оператор</option><option value="viewer">Наблюдатель</option><option value="admin">Администратор</option></select></label>
+        <label class="settings-field">Временный пароль<input id="account-password" type="password" minlength="6" required></label>
+        <button class="primary-button account-create-button" type="submit">Добавить сотрудника</button>
+    </form>
+    <div id="account-list" class="account-list">
+        {% for user in users %}<div class="account-row" data-account="{{ user.username }}"><div><b>{{ user.display_name }}</b><span>{{ user.username }} · {{ role_labels[user.role] }}</span></div><small>{{ user.created_at }}</small>{% if user.username != current_user.username %}<button class="small-button account-delete" data-username="{{ user.username }}">Удалить</button>{% else %}<span class="account-current">текущая</span>{% endif %}</div>{% endfor %}
+    </div>
+</section>
+{% endif %}
+{% endblock %}

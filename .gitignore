@@ -1,0 +1,46 @@
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+*.bak
+*.before_*
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Локальные секреты и учётные записи
+.env
+*.env
+berets.env
+users.json
+qa_users.json
+
+# Изменяемое состояние конкретного стенда
+container_inventory.json
+runtime_settings.json
+vision_zones.json
+manipulator_routes.json
+
+# Веса распознавания и наборы данных распространяются отдельно.
+# Геометрия цифрового двойника в static/digital_twin/models отслеживается Git.
+/software/apple_sorting/models/
+/software/flask_app/models/
+datasets/
+*.pt
+*.onnx
+*.engine
+
+# Резервные копии и пакеты развёртывания
+backups/
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# Среды разработки
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

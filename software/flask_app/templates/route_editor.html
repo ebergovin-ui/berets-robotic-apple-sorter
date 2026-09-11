@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% block title %}маршрутные точки{% endblock %}
+{% block header %}Манипулятор и рельса{% endblock %}
+{% block content %}
+<div class="page-intro simple-intro"><h2>Редактор маршрутных точек</h2></div>
+<nav class="manipulator-tabs" aria-label="Разделы управления манипулятором">
+    <a href="{{ url_for('manipulator') }}">Ручное управление</a>
+    <a class="active" href="{{ url_for('manipulator_routes') }}">Маршрутные точки</a>
+</nav>
+
+<section class="route-live-strip" aria-live="polite">
+    <div><span>Контроллер</span><strong id="route-controller-state">проверка…</strong></div>
+    <div><span>Рельса</span><strong id="route-live-rail">—</strong></div>
+    <div><span>ID1 / ID10 / ID11 / ID16</span><strong id="route-live-joints">—</strong></div>
+    <div><span>Отображение</span><strong id="route-preview-mode">выбранная точка</strong></div>
+</section>
+
+<section class="route-editor-layout">
+    <div class="panel route-preview-panel">
+        <div class="panel-head">
+            <div><span class="eyebrow">ЦИФРОВОЙ ДВОЙНИК</span><h3>Положение комплекса</h3></div>
+            <div class="route-preview-actions">
+                <button class="quiet-button" id="route-show-live" type="button">Текущее положение</button>
+                <button class="quiet-button" id="route-show-selected" type="button">Выбранная точка</button>
+                <select id="route-animation-rate" aria-label="Скорость анимации">
+                    <option value="0.5">0,5×</option>
+                    <option value="1" selected>1×</option>
+                    <option value="2">2×</option>
+                </select>
+                <label class="route-rail-animation-speed">Рельса
+                    <input id="route-animation-rail-speed" type="range" min="5" max="100" value="40" step="5">
+                    <output id="route-animation-rail-speed-value">40%</output>
+                </label>
+                <button class="primary-button" id="route-play-animation" type="button">Запустить анимацию</button>
+                <button class="quiet-button" id="route-stop-animation" type="button" disabled>Остановить</button>
+            </div>
+        </div>
+        <p class="route-animation-note">1× воспроизводит каждый переход за точно заданное в точке «Время серв, мс».</p>
+        <iframe id="route-preview-frame" class="route-preview-frame" title="Трёхмерное положение манипулятора" src="{{ url_for('static', filename='digital_twin/index.html') }}?embed=1&amp;v=20260812-ui6"></iframe>
+    </div>
+
+    <div class="panel route-points-panel">
+        <div class="panel-head route-list-head">
+            <div><span class="eyebrow">ПОСЛЕДОВАТЕЛЬНОСТЬ</span><h3>Маршрутные точки</h3></div>
+            <select id="route-name" aria-label="Выберите маршрут">
+                <option value="red">Красный контейнер</option>
+                <option value="green">Зелёный контейнер</option>
+                <option value="yellow">Жёлтый контейнер</option>
+                <option value="service">Служебные точки</option>
+            </select>
+        </div>
+        <div class="route-level-controls" id="route-level-controls">
+            <label>Полная стопка
+                <select id="route-full-level">
+                    <option value="1">уровень 1 — основание</option>
+                    <option value="2">уровень 2</option>
+                    <option value="3">уровень 3</option>
+                    <option value="4">уровень 4</option>
+                </select>
+            </label>
+            <label>Пустая стопка
+                <select id="route-empty-level">
+                    <option value="6" selected>уровень 6 — верхний</option>
+                    <option value="5">уровень 5</option>
+                    <option value="4">уровень 4</option>
+                    <option value="3">уровень 3</option>
+                    <option value="2">уровень 2</option>
+                    <option value="1">уровень 1 — основание</option>
+                </select>
+            </label>
+        </div>
+        <div id="route-calibration-scope" class="route-calibration-scope" role="status">
+            Сервисная калибровка: доступны все точки выбранного маршрута.
+        </div>
+        <div class="route-block-legend" aria-label="Технологические блоки">
+            <span data-block="pickup_common">Забрать полный</span>
+            <span data-block="full_level">Высота полной стопки 1–4</span>
+            <span data-block="empty_level">Высота пустой стопки 1–6</span>
+            <span data-block="delivery_color">Установить пустой</span>
+        </div>
+        <ol id="route-point-list" class="route-point-list"></ol>
+        <div class="route-list-actions">
+            <button class="quiet-button" id="route-add-before" type="button">Добавить до</button>
+            <button class="primary-button" id="route-add-after" type="button">Добавить после</button>
+            <button class="quiet-button" id="route-copy-point" type="button">Копировать точку</button>
+            <button class="quiet-button" id="route-paste-before" type="button">Вставить до</button>
+            <button class="quiet-button" id="route-paste-after" type="button">Вставить после</button>
+            <button class="quiet-button" id="route-export-json" type="button">Скачать все маршруты JSON</button>
+        </div>
+    </div>
+</section>
+
+<section class="panel route-point-editor">
+    <div class="panel-head">
+        <div><span class="eyebrow">ВЫБРАННАЯ ТОЧКА</span><h3 id="route-point-heading">Новая точка</h3></div>
+        <span class="tag" id="route-save-state">изменений нет</span>
+    </div>
+    <div class="route-point-fields">
+        <label class="route-name-field">Название<input id="route-point-name" type="text" maxlength="60" value="Новая точка"></label>
+        <label>Рельса, мм<input id="route-point-rail" type="number" min="0" max="347" step="1" value="0"></label>
+        <label>ID1 · основание<input id="route-point-j1" type="number" min="0" max="1000" step="1" value="500"></label>
+        <label>ID10 · плечо<input id="route-point-j10" type="number" min="100" max="1000" step="1" value="500"></label>
+        <label>ID11 · локоть<input id="route-point-j11" type="number" min="0" max="1000" step="1" value="375"></label>
+        <label>ID16 · кисть<input id="route-point-j16" type="number" min="0" max="900" step="1" value="500"></label>
+        <label>Скорость рельсы, %<input id="route-point-speed" type="number" min="1" max="100" step="1" value="20"></label>
+        <label>Время серв, мс<input id="route-point-time" type="number" min="100" max="30000" step="100" value="1500"></label>
+    </div>
+    <div class="route-point-actions">
+        <button class="primary-button" id="route-save-point" type="button">Сохранить точку</button>
+        <button class="quiet-button" id="route-move-up" type="button">Выше</button>
+        <button class="quiet-button" id="route-move-down" type="button">Ниже</button>
+        <button class="danger-outline-button" id="route-delete-point" type="button">Удалить</button>
+    </div>
+</section>
+
+<section class="panel route-teach-panel">
+    <div class="panel-head"><div><span class="eyebrow">РЕЖИМ ОБУЧЕНИЯ</span><h3>Проверка выбранной точки на механизме</h3></div><span class="tag">не выше 20%</span></div>
+    <p>Команда доступна только после остановки сортировки. Для рельсы дополнительно обязательны подключение и HOME. Переход между двумя точками ещё не является проверенной траекторией.</p>
+    <div class="route-axis-choice">
+        <label><input id="route-move-arm" type="checkbox" checked> Манипулятор</label>
+        <label><input id="route-move-rail" type="checkbox" checked> Рельса</label>
+    </div>
+    <button class="primary-button" id="route-send-real" type="button" disabled>Перейти в выбранную точку</button>
+    <div class="route-run-controls">
+        <label>Скорость рельсы полного цикла
+            <input id="route-run-rail-speed" type="range" min="5" max="40" value="15" step="5">
+            <output id="route-run-rail-speed-value">15%</output>
+        </label>
+        <button class="primary-button" id="route-run-real" type="button" disabled>Запустить весь маршрут</button>
+        <button class="danger-outline-button" id="route-stop-real" type="button" disabled>Остановить маршрут</button>
+    </div>
+    <div id="route-editor-message" class="result-box">Загрузка маршрутных точек…</div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/route_editor.js', v='20260908-unlocked-points') }}"></script>
+{% endblock %}

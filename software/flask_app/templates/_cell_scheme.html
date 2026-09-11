@@ -1,0 +1,58 @@
+<svg class="cell-svg complex-top-view" viewBox="0 0 900 560" role="img" aria-label="Технический вид сверху на реальную компоновку комплекса BERETS">
+    <title>Комплекс BERETS — вид сверху</title>
+    <desc>Внизу расположены дозатор и конвейер с тремя сортировочными каналами. В верхней части находятся стопки контейнеров, линейная рельса, подвижная каретка и четырёхосевой манипулятор.</desc>
+    <rect x="12" y="12" width="876" height="536" rx="18" class="cell-floor"/>
+    <path d="M32 388H868" class="cell-zone-line"/>
+    <g class="cell-stack cell-stack-empty">
+        <path d="M96 224h116v58H96z"/><path d="M104 216h116v58H104z"/><path d="M112 208h116v58H112z"/>
+        <path d="M128 224h82M128 237h82M128 250h82" class="cell-crate-slots"/>
+    </g>
+
+    <g class="cell-full-stacks">
+        <g transform="translate(430 62)"><path d="M0 16h94v82H0z" class="cell-container red"/><path d="M0 8h94v82H0z" class="cell-container red"/><path d="M12 29h70M12 47h70M12 65h70" class="cell-crate-slots"/></g>
+        <g transform="translate(548 62)"><path d="M0 16h94v82H0z" class="cell-container green"/><path d="M0 8h94v82H0z" class="cell-container green"/><path d="M12 29h70M12 47h70M12 65h70" class="cell-crate-slots"/></g>
+        <g transform="translate(666 62)"><path d="M0 16h94v82H0z" class="cell-container yellow"/><path d="M0 8h94v82H0z" class="cell-container yellow"/><path d="M12 29h70M12 47h70M12 65h70" class="cell-crate-slots"/></g>
+    </g>
+
+    <g class="cell-rail-assembly">
+        <rect x="335" y="229" width="448" height="52" rx="10" class="cell-rail-bed"/>
+        <path d="M352 243H766M352 267H766" class="cell-rail-beam"/>
+        <path d="M352 255H766" class="cell-rail-belt"/>
+        <rect x="320" y="233" width="26" height="44" rx="5" class="cell-rail-mount"/>
+        <rect x="774" y="233" width="26" height="44" rx="5" class="cell-rail-mount"/>
+        <rect x="792" y="237" width="38" height="36" rx="7" class="cell-stepper"/>
+        <g id="cell-robot" transform="translate(736 0)">
+            <rect x="-38" y="231" width="76" height="48" rx="8" class="cell-carriage"/>
+            <rect x="-28" y="220" width="56" height="34" rx="8" class="cell-carriage-platform"/>
+            <circle cx="0" cy="237" r="13" class="robot-joint"/>
+            <path d="M0 237l-22-25-25 31" class="robot-arm"/>
+            <circle cx="-22" cy="212" r="9" class="robot-joint"/>
+            <circle cx="-47" cy="243" r="8" class="robot-joint"/>
+            <path d="M-47 243l-22 19" class="fork-line"/>
+            <path d="M-69 255l-18 7M-69 269l-18 7M-69 255v14" class="fork-line"/>
+        </g>
+    </g>
+
+    <g class="cell-sorting-stations">
+        <g transform="translate(430 324)"><path d="M0 0h94v62H0z" class="cell-container red"/><path d="M12 15h70M12 31h70M12 47h70" class="cell-crate-slots"/><path d="M17 62h60l-12 24H29z" class="cell-chute red"/></g>
+        <g transform="translate(548 324)"><path d="M0 0h94v62H0z" class="cell-container green"/><path d="M12 15h70M12 31h70M12 47h70" class="cell-crate-slots"/><path d="M17 62h60l-12 24H29z" class="cell-chute green"/></g>
+        <g transform="translate(666 324)"><path d="M0 0h94v62H0z" class="cell-container yellow"/><path d="M12 15h70M12 31h70M12 47h70" class="cell-crate-slots"/><path d="M17 62h60l-12 24H29z" class="cell-chute yellow"/></g>
+    </g>
+
+    <g class="cell-conveyor">
+        <rect x="139" y="432" width="661" height="82" rx="12" class="cell-belt-frame"/>
+        <rect x="155" y="444" width="629" height="58" rx="8" class="cell-belt-surface"/>
+        <path d="M177 473H762" class="belt-ribs"/>
+        <rect x="438" y="494" width="64" height="20" rx="5" class="cell-camera"/>
+        <circle cx="470" cy="504" r="7" class="cell-camera-lens"/>
+    </g>
+
+    <g class="cell-dispenser">
+        <path d="M42 421h98v93H42z" class="cell-dispenser-body"/>
+        <path d="M54 433h72l-12 58H66z" class="cell-dispenser-hopper"/>
+        <circle cx="90" cy="463" r="19" class="cell-dispenser-wheel"/>
+        <rect x="114" y="452" width="34" height="22" rx="5" class="cell-dispenser-outlet"/>
+    </g>
+
+    <g id="cell-apple-group" hidden><circle id="cell-apple" cx="180" cy="473" r="10" class="belt-apple"/></g>
+</svg>

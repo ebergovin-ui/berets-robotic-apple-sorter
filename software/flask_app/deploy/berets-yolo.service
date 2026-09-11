@@ -1,0 +1,17 @@
+[Unit]
+Description=BERETS YOLO camera bridge
+After=berets-flask.service
+Requires=berets-flask.service
+
+[Service]
+Type=simple
+User=berets
+WorkingDirectory=/opt/berets/software/flask_app
+EnvironmentFile=/opt/berets/software/flask_app/berets.env
+ExecStart=/opt/berets/software/apple_sorting/.venv/bin/python /opt/berets/software/flask_app/yolo_bridge.py
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

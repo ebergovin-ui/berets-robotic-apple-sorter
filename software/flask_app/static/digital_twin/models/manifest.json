@@ -1,0 +1,445 @@
+{
+  "coordinate_system": {
+    "units": "millimetres",
+    "up": "Z",
+    "rail_axis": "X",
+    "rail_positive": "towards MAX"
+  },
+  "rail": {
+    "max_travel_mm": 347.0,
+    "steps_per_mm": 40.0,
+    "max_travel_steps": 13880,
+    "assembly_reference_mm": 0.0,
+    "zero_side": "yellow_container_MAX_X",
+    "shaft_span_mm": 500.0,
+    "inner_support_span_mm": 472.0,
+    "carriage_length_mm": 125.0,
+    "reference_status": "free_span_minus_carriage_length"
+  },
+  "arm": {
+    "home": {
+      "1": 500,
+      "10": 500,
+      "11": 375,
+      "16": 500
+    },
+    "limits": {
+      "1": {
+        "min": 0,
+        "max": 1000
+      },
+      "10": {
+        "min": 100,
+        "max": 1000
+      },
+      "11": {
+        "min": 0,
+        "max": 1000
+      },
+      "16": {
+        "min": 0,
+        "max": 900
+      }
+    },
+    "limits_status": "preliminary_from_CAD_offline_only",
+    "positions_per_degree": 4.166666666666667,
+    "assembly_from_arm_local": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        483.478462
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0,
+        738.583095
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0,
+        -8.424953
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "pivots": {
+      "1": [
+        102.19019,
+        114.8772,
+        -182.80664
+      ],
+      "10": [
+        89.803864,
+        89.571243,
+        -270.95664
+      ],
+      "11": [
+        99.693073,
+        87.592807,
+        -448.133718
+      ],
+      "16": [
+        113.302233,
+        89.255324,
+        -640.566912
+      ]
+    },
+    "axes": {
+      "1": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "10": [
+        -0.004496923,
+        0.999989889,
+        0.0
+      ],
+      "11": [
+        -0.004501769,
+        0.999989858,
+        -0.000137196
+      ],
+      "16": [
+        -0.018775915,
+        0.999823695,
+        -0.000210369
+      ]
+    },
+    "groups": {
+      "arm_fixed": {
+        "parts": {
+          "servo_black": {
+            "file": "arm_fixed_servo_black.glb",
+            "triangles": 13006,
+            "bytes": 233124,
+            "color": "#15191d"
+          },
+          "base_orange": {
+            "file": "arm_fixed_base_orange.glb",
+            "triangles": 7276,
+            "bytes": 131728,
+            "color": "#ff8a2b"
+          }
+        }
+      },
+      "joint_1": {
+        "parts": {
+          "link_white": {
+            "file": "joint_1_link_white.glb",
+            "triangles": 7297,
+            "bytes": 132048,
+            "color": "#edf1f2"
+          }
+        }
+      },
+      "joint_10": {
+        "parts": {
+          "link_white": {
+            "file": "joint_10_link_white.glb",
+            "triangles": 11489,
+            "bytes": 207800,
+            "color": "#edf1f2"
+          },
+          "servo_black": {
+            "file": "joint_1_servo_black.glb",
+            "triangles": 13006,
+            "bytes": 232492,
+            "color": "#15191d"
+          }
+        }
+      },
+      "joint_11": {
+        "parts": {
+          "link_white": {
+            "file": "joint_11_link_white.glb",
+            "triangles": 22121,
+            "bytes": 399088,
+            "color": "#edf1f2"
+          },
+          "servo_black": {
+            "file": "joint_10_servo_black.glb",
+            "triangles": 13006,
+            "bytes": 232496,
+            "color": "#15191d"
+          }
+        }
+      },
+      "joint_16": {
+        "parts": {
+          "link_white": {
+            "file": "joint_16_link_white.glb",
+            "triangles": 2246,
+            "bytes": 41648,
+            "color": "#edf1f2"
+          },
+          "servo_black": {
+            "file": "joint_16_servo_black.glb",
+            "triangles": 13006,
+            "bytes": 232500,
+            "color": "#15191d"
+          }
+        }
+      }
+    },
+    "assignments": [
+      {
+        "component": "KR_6_R700-2_V01_Base15:1",
+        "group": "joint_1",
+        "part": "link_white"
+      },
+      {
+        "component": "KR_6_R700-2_V01_Base14:1",
+        "group": "joint_10",
+        "part": "link_white"
+      },
+      {
+        "component": "KR_6_R700-2_V01_Base1:1",
+        "group": "joint_11",
+        "part": "link_white"
+      },
+      {
+        "component": "KR_6_R700-2_V01_Base16:1",
+        "group": "joint_11",
+        "part": "link_white"
+      },
+      {
+        "component": "KR_6_R700-2_V01_Base13:1",
+        "group": "joint_16",
+        "part": "link_white"
+      },
+      {
+        "component": "servo lx 224:2",
+        "group": "arm_fixed",
+        "part": "servo_black"
+      },
+      {
+        "component": "Component26:2",
+        "group": "arm_fixed",
+        "part": "base_orange"
+      },
+      {
+        "component": "servo lx 224:3",
+        "group": "joint_1",
+        "part": "servo_black"
+      },
+      {
+        "component": "servo lx 224:4",
+        "group": "joint_10",
+        "part": "servo_black"
+      },
+      {
+        "component": "servo lx 224:5",
+        "group": "joint_16",
+        "part": "servo_black"
+      },
+      {
+        "component": "Component10:1",
+        "group": "arm_fixed",
+        "part": "base_orange"
+      }
+    ]
+  },
+  "scene": {
+    "parts": {
+      "belt_yellow": {
+        "file": "scene_belt_yellow.glb",
+        "triangles": 168400,
+        "bytes": 3022648,
+        "color": "#f6c936"
+      },
+      "conveyor_servos_black": {
+        "file": "scene_conveyor_servos_black.glb",
+        "triangles": 47926,
+        "bytes": 853096,
+        "color": "#15191d"
+      },
+      "sorting_gates_yellow": {
+        "file": "scene_sorting_gates_yellow.glb",
+        "triangles": 2838,
+        "bytes": 51944,
+        "color": "#f6c936"
+      },
+      "servo_mounts_blue": {
+        "file": "scene_servo_mounts_blue.glb",
+        "triangles": 10058,
+        "bytes": 180740,
+        "color": "#2f6fff"
+      },
+      "red_chute_blue": {
+        "file": "scene_red_chute_blue.glb",
+        "triangles": 552,
+        "bytes": 11048,
+        "color": "#2f6fff"
+      },
+      "dispenser_claw_green": {
+        "file": "scene_dispenser_claw_green.glb",
+        "triangles": 3369,
+        "bytes": 61688,
+        "color": "#39e75f"
+      },
+      "dispenser_lower_lemon": {
+        "file": "scene_dispenser_lower_lemon.glb",
+        "triangles": 3140,
+        "bytes": 57384,
+        "color": "#dfff2f"
+      },
+      "sorting_corridors_red": {
+        "file": "scene_sorting_corridors_red.glb",
+        "triangles": 2732,
+        "bytes": 49988,
+        "color": "#dc3c45"
+      },
+      "far_conveyor_sides_blue": {
+        "file": "scene_far_conveyor_sides_blue.glb",
+        "triangles": 17140,
+        "bytes": 308724,
+        "color": "#2f6fff"
+      },
+      "near_conveyor_sides_white": {
+        "file": "scene_near_conveyor_sides_white.glb",
+        "triangles": 8922,
+        "bytes": 161288,
+        "color": "#edf1f2"
+      },
+      "neutral": {
+        "file": "scene_neutral.glb",
+        "triangles": 22628,
+        "bytes": 406796,
+        "color": "#8f9aa3"
+      },
+      "rail_metal_silver": {
+        "file": "scene_rail_metal_silver.glb",
+        "triangles": 48210,
+        "bytes": 869836,
+        "color": "#aeb7bd"
+      },
+      "floor_plywood": {
+        "file": "scene_floor_plywood.glb",
+        "triangles": 3452,
+        "bytes": 62552,
+        "color": "#b98958"
+      },
+      "apple_containers_white": {
+        "file": "scene_apple_containers_white.glb",
+        "triangles": 7952,
+        "bytes": 144892,
+        "color": "#edf1f2"
+      },
+      "conveyor_motor_box_green": {
+        "file": "scene_conveyor_motor_box_green.glb",
+        "triangles": 5650,
+        "bytes": 102664,
+        "color": "#81d66d"
+      },
+      "conveyor_motor_black": {
+        "file": "scene_conveyor_motor_black.glb",
+        "triangles": 6298,
+        "bytes": 113984,
+        "color": "#15191d"
+      },
+      "rail_stepper_black": {
+        "file": "scene_rail_stepper_black.glb",
+        "triangles": 2620,
+        "bytes": 47768,
+        "color": "#15191d"
+      },
+      "rail_mounts_yellow": {
+        "file": "scene_rail_mounts_yellow.glb",
+        "triangles": 4298,
+        "bytes": 78140,
+        "color": "#f6c936"
+      },
+      "rail_belt_black": {
+        "file": "scene_rail_belt_black.glb",
+        "triangles": 2560,
+        "bytes": 47132,
+        "color": "#15191d"
+      },
+      "dispenser_upper_blue": {
+        "file": "scene_dispenser_upper_blue.glb",
+        "triangles": 2326,
+        "bytes": 43040,
+        "color": "#2f6fff"
+      },
+      "electronics_box_red": {
+        "file": "scene_electronics_box_red.glb",
+        "triangles": 5892,
+        "bytes": 106596,
+        "color": "#dc3c45"
+      }
+    },
+    "carriage_parts": {
+      "carriage_metal_silver": {
+        "file": "scene_carriage_metal_silver.glb",
+        "triangles": 6376,
+        "bytes": 115412,
+        "color": "#aeb7bd"
+      },
+      "carriage_platform_light_green": {
+        "file": "scene_carriage_platform_light_green.glb",
+        "triangles": 7020,
+        "bytes": 126916,
+        "color": "#81d66d"
+      }
+    },
+    "tool": {
+      "file": "fork_tool.glb",
+      "triangles": 1252,
+      "bytes": 23564,
+      "color": "#f6c936"
+    },
+    "container": {
+      "file": "container_dynamic.glb",
+      "triangles": 2500,
+      "bytes": 46048,
+      "source_center_mm": [
+        944.707077041502,
+        246.987848148723,
+        61.0319999999997
+      ],
+      "size_mm": [
+        112.852,
+        191.434,
+        99.0
+      ]
+    }
+  },
+  "skipped_occurrences": [
+    "KUKA KR6 R700(ЫИ):1",
+    "box2:1",
+    "box2:2",
+    "box2:3",
+    "M5 screw:1",
+    "M5 screw:2",
+    "M5 screw:3",
+    "M5 screw:4",
+    "box2(Mirror):1",
+    "box2(Mirror):2",
+    "box2(Mirror):3",
+    "box2(Mirror):4",
+    "box2(Mirror):5",
+    "box2(Mirror):6",
+    "box2(Mirror):7",
+    "box2(Mirror):8",
+    "box2(Mirror):9",
+    "box2(Mirror):10",
+    "box2(Mirror):11",
+    "box2(Mirror):12",
+    "box2:4",
+    "box2:5",
+    "box2:6",
+    "box2:7",
+    "box2:8",
+    "box2:9",
+    "TMC2208_3d:1",
+    "RASPBERRY_PI_5_1:1"
+  ]
+}

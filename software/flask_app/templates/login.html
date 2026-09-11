@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <title>BERETS — вход</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css', v='20260812-ui6') }}">
+</head>
+<body class="login-page">
+    <main class="login-card" aria-labelledby="login-title">
+        <div class="brand login-brand">
+            <span class="brand-mark"></span>
+            <div><b>BERETS</b><small>APPLE SORTING</small></div>
+        </div>
+        <span class="eyebrow">ЗАЩИЩЁННАЯ ПАНЕЛЬ</span>
+        <h1 id="login-title">Вход в систему</h1>
+        {% if not preauth %}
+        <p>Введите общий пароль системы, который знают операторы.</p>
+        {% else %}
+        <div class="login-approved"><span class="login-approved-dot"></span>Общий пароль принят</div>
+        <p>Теперь выберите свой профиль и введите личный пароль.</p>
+        {% endif %}
+        {% if error %}<div class="login-error" role="alert">{{ error }}</div>{% endif %}
+
+        {% if not preauth %}
+        <form method="post" class="login-form">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+            <input type="hidden" name="stage" value="system">
+            <input type="hidden" name="next" value="{{ next_url }}">
+            <label class="login-label" for="system-password">Общий пароль</label>
+            <input class="login-input" id="system-password" name="system_password" type="password" autocomplete="current-password" required autofocus>
+            <button class="primary-button login-submit" type="submit">Продолжить</button>
+        </form>
+        {% else %}
+        <form method="post" class="login-form">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+            <input type="hidden" name="stage" value="profile">
+            <input type="hidden" name="next" value="{{ next_url }}">
+            <label class="login-label" for="username">Профиль сотрудника</label>
+            <div class="profile-select-line">
+                <select class="login-input login-select" id="username" name="username" {% if not users %}disabled{% endif %} required>
+                    {% if users %}{% for user in users %}<option value="{{ user.username }}" {% if created_name == user.display_name %}selected{% endif %}>{{ user.display_name }} · {{ role_labels[user.role] }}</option>{% endfor %}{% else %}<option>Профили пока не созданы</option>{% endif %}
+                </select>
+                <button class="plus-button" id="show-profile-form" type="button" aria-label="Добавить профиль">+</button>
+            </div>
+            <label class="login-label" for="profile-password">Личный пароль профиля</label>
+            <input class="login-input" id="profile-password" name="password" type="password" autocomplete="current-password" {% if not users %}disabled{% endif %} required>
+            <button class="primary-button login-submit" type="submit" {% if not users %}disabled{% endif %}>Войти</button>
+        </form>
+
+        <form method="post" action="{{ url_for('login_create_profile') }}" id="profile-create-form" class="profile-create-form" hidden>
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+            <input type="hidden" name="next" value="{{ next_url }}">
+            <div class="profile-create-title"><b>Новый профиль</b><span>После сохранения он появится в списке сотрудников.</span></div>
+            <label class="login-label" for="new-display-name">Имя сотрудника</label>
+            <input class="login-input" id="new-display-name" name="display_name" required>
+            <label class="login-label" for="new-profile-password">Личный пароль</label>
+            <input class="login-input" id="new-profile-password" name="password" type="password" minlength="6" required>
+            <button class="primary-button login-submit" type="submit">Сохранить профиль</button>
+        </form>
+        {% endif %}
+
+        <div class="login-guide-note"><b>Рекомендация</b><span>Перед началом работы рекомендуется ознакомиться с руководством по эксплуатации системы.</span></div>
+    </main>
+    {% if preauth %}<script src="{{ url_for('static', filename='js/login.js', v='20260823-sec1') }}"></script>{% endif %}
+</body>
+</html>

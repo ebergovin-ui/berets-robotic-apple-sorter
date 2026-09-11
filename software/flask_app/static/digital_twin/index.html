@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BERETS — цифровой двойник</title>
+  <link rel="stylesheet" href="style.css?v=20260910-dashboard3d">
+</head>
+<body>
+  <script src="bootstrap.js?v=20260910-dashboard3d"></script>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark"></span><div><b>BERETS</b><small>APPLE SORTING · DIGITAL TWIN</small></div></div>
+      <div class="status"><span class="status-dot"></span><span id="status-text">Загрузка модели</span></div>
+    </header>
+
+    <section class="viewer-card">
+      <canvas id="scene"></canvas>
+      <div class="view-actions">
+        <button data-view="iso" class="active">Объём</button>
+        <button data-view="top">Сверху</button>
+        <button data-view="side">Сбоку</button>
+        <button data-view="front">Спереди</button>
+      </div>
+      <div class="scene-hint">ЛКМ/палец — вращение · колесо/щипок — масштаб · ПКМ — перемещение</div>
+      <div id="fps" class="fps">— FPS</div>
+    </section>
+
+    <section class="controls-card">
+      <div class="section-head"><div><span>МАКЕТ БЕЗ ЖЕЛЕЗА</span><h1>Положение комплекса</h1></div><button id="home" class="home-button">HOME</button></div>
+
+      <div class="control-grid">
+        <label class="control-row"><span><b>Рельса</b><small>0 у жёлтого → 347 мм</small></span><input id="rail" type="range" min="0" max="347" value="0" step="1"><output id="rail-value">0 мм</output></label>
+        <label class="control-row"><span><b>ID1</b><small>Основание</small></span><input id="joint-1" type="range" min="0" max="1000" value="500"><output id="joint-1-value">500</output></label>
+        <label class="control-row"><span><b>ID10</b><small>Плечо</small></span><input id="joint-10" type="range" min="0" max="1000" value="500"><output id="joint-10-value">500</output></label>
+        <label class="control-row"><span><b>ID11</b><small>Локоть</small></span><input id="joint-11" type="range" min="0" max="1000" value="375"><output id="joint-11-value">375</output></label>
+        <label class="control-row"><span><b>ID16</b><small>Кисть</small></span><input id="joint-16" type="range" min="0" max="1000" value="500"><output id="joint-16-value">500</output></label>
+      </div>
+
+      <div class="legend">
+        <span><i class="static"></i>Комплекс</span>
+        <span><i class="carriage"></i>Каретка</span>
+        <span><i class="arm"></i>Манипулятор</span>
+        <span><i class="tool"></i>Вилы</span>
+      </div>
+    </section>
+
+    <section class="simulation-card" aria-labelledby="simulation-title">
+      <div class="simulation-head">
+        <div><span>ОФЛАЙН · БЕЗ КОМАНД ОБОРУДОВАНИЮ</span><h2 id="simulation-title">Перенос контейнера</h2></div>
+        <div id="trajectory-state" class="trajectory-state">Готов к запуску</div>
+      </div>
+
+      <div class="simulation-layout">
+        <div class="trajectory-panel">
+          <div class="trajectory-actions">
+            <button id="trajectory-start" class="primary-action">Запустить анимацию</button>
+            <button id="trajectory-pause">Пауза</button>
+            <button id="trajectory-reset">Сбросить</button>
+            <button id="clear-filled-stack">Очистить стопку</button>
+          </div>
+          <div id="trajectory-steps" class="trajectory-steps" aria-label="Этапы переноса">
+            <span>Полный</span><span>Ввод вил</span><span>К оси</span><span>В стопку</span><span>Пустой</span><span>На станцию</span><span>Ожидание</span>
+          </div>
+          <div class="simulation-fields">
+            <label><span>Цвет контейнера</span><select id="trajectory-color"><option value="red">Красный</option><option value="green">Зелёный</option><option value="yellow">Жёлтый</option></select></label>
+            <label><span>Доставлено пустых контейнеров</span><input id="empty-container-count" type="number" min="0" max="6" value="6" step="1"><output id="empty-container-count-value">6</output><button id="deliver-empty-containers" type="button">Доставить контейнеры</button></label>
+            <label><span>Скорость анимации</span><input id="trajectory-speed" type="range" min="25" max="150" value="75" step="5"><output id="trajectory-speed-value">75%</output></label>
+            <label><span>Поджатие вил ID16</span><input id="fork-offset" type="range" min="-63" max="0" value="-63" step="1"><output id="fork-offset-value">−63 · −15,1°</output></label>
+            <label><span>Помощь латекса</span><input id="latex-assist" type="range" min="0" max="15" value="8.5" step="0.5"><output id="latex-assist-value">8,5 кг·см</output></label>
+          </div>
+          <p class="simulation-note">Пределы пока расчётные по CAD. Перед переносом на железо каждый край проверяется без контейнера и на минимальной скорости.</p>
+          <p id="collision-status" class="simulation-note">Самопересечения звеньев: не обнаружены</p>
+
+          <section class="route-wizard" aria-labelledby="route-wizard-title">
+            <div class="editor-head"><div><span>МАСТЕР МАРШРУТА</span><h3 id="route-wizard-title">Цикл замены контейнера</h3></div><span id="route-progress" class="editor-count">0 / 12</span></div>
+            <p>Нажми «Рассчитать маршрут» — двойник заполнит базовый цикл по геометрии CAD. Для точной доводки выбери этап ниже, выставь положение верхними ползунками и нажми «Сохранить этап».</p>
+            <div class="route-tools"><button id="route-calculate" class="route-calculate" type="button">Рассчитать маршрут</button><label><span>Копировать углы из</span><select id="route-copy-source"><option value="red">Красного</option><option value="green">Зелёного</option><option value="yellow">Жёлтого</option></select></label><button id="route-copy-joints" type="button">Копировать углы</button><button id="route-reset-color" type="button">Сбросить цвет</button></div>
+            <div id="route-stage-tabs" class="route-stage-tabs" role="tablist" aria-label="Этапы маршрута"></div>
+            <div id="route-stage-editor" class="route-stage-editor" aria-live="polite"></div>
+          </section>
+
+          <details class="advanced-trajectory"><summary>Дополнительно: произвольные кадры и JSON</summary><section class="trajectory-editor" aria-labelledby="editor-title">
+            <div class="editor-head"><div><span>РЕДАКТОР ТРАЕКТОРИЙ</span><h3 id="editor-title">Запись кадров</h3></div><span id="keyframe-count" class="editor-count">0 кадров</span></div>
+            <p>Выставь рельсу и сервы верхними ползунками, затем запиши кадр. Действия выполняются после достижения кадра.</p>
+            <div class="editor-fields">
+              <label><span>Название кадра</span><input id="keyframe-label" type="text" maxlength="40" value="Подход"></label>
+              <label><span>Длительность, мс</span><input id="keyframe-duration" type="number" min="100" max="30000" step="100" value="1200"></label>
+              <label><span>Действие после кадра</span><select id="keyframe-action"><option value="none">Только перемещение</option><option value="take-full">Взять полный контейнер</option><option value="place-full">Поставить полный в стопку</option><option value="take-empty">Взять верхний пустой</option><option value="place-empty">Поставить пустой на станцию</option></select></label>
+            </div>
+            <div class="editor-actions"><button id="keyframe-record" type="button">Записать текущий кадр</button><button id="keyframe-play" type="button">Проиграть запись</button><button id="keyframe-clear" type="button">Очистить запись</button></div>
+            <ol id="keyframe-list" class="keyframe-list" aria-live="polite"></ol>
+            <details class="trajectory-data"><summary>JSON траектории: копирование и перенос между компьютерами</summary><textarea id="trajectory-json" spellcheck="false"></textarea><button id="trajectory-json-apply" type="button">Загрузить JSON</button></details>
+          </section></details>
+        </div>
+
+        <div class="load-panel">
+          <div class="load-meter"><span id="load-fill"></span><i id="capacity-mark"></i></div>
+          <div class="load-value"><strong id="shoulder-load">0,0</strong><span>кг·см на ID10 после компенсации</span></div>
+          <dl>
+            <div><dt>Расчётный максимум</dt><dd>28,5 кг·см</dd></div>
+            <div><dt>Номинал сервы</dt><dd>20,0 кг·см</dd></div>
+            <div><dt>Помощь латекса</dt><dd id="latex-summary">8,5 кг·см</dd></div>
+            <div><dt>Запас</dt><dd id="torque-reserve">0,0 кг·см</dd></div>
+          </dl>
+          <div id="load-warning" class="load-warning">Контейнер не захвачен</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="viewer.bundle.js?v=20260812-ui6"></script>
+</body>
+</html>

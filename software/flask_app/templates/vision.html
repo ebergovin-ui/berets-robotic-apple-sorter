@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block title %}распознавание{% endblock %}
+{% block header %}Распознавание яблок{% endblock %}
+{% block content %}
+<div class="page-intro simple-intro"><h2>Компьютерное зрение</h2></div>
+
+<section class="control-layout">
+    <div class="panel camera-panel">
+        <div class="panel-head"><div><span class="eyebrow">КАМЕРА</span><h3>Изображение</h3></div><span class="tag">640 × 480</span></div>
+        <div class="camera-placeholder" id="vision-calibration-stage"><img id="vision-live-frame" alt="Поток камеры YOLO" hidden><canvas id="vision-zone-canvas" aria-label="Разметка зон сортировки"></canvas><div class="camera-crosshair"></div><div class="camera-message" id="camera-message"><span class="camera-icon">◎</span><b id="camera-connection-text">Камера не подключена</b><small id="camera-connection-detail">Запустите модуль YOLO для получения кадров и результатов</small></div><span class="camera-time" id="camera-fps-overlay">—</span></div>
+    </div>
+    <div class="panel detection-panel">
+        <div class="panel-head"><div><span class="eyebrow">ПОСЛЕДНИЙ ОБЪЕКТ</span><h3 id="last-detection">ожидание</h3></div><span class="confidence" id="confidence">0%</span></div>
+        <div class="detection-shape"><i id="detection-apple" class="apple red"></i><div><span>Класс объекта</span><b id="detection-class">—</b></div></div>
+        <div class="confidence-bar"><span id="confidence-bar" style="width:0%"></span></div>
+        <div class="info-list"><div><span>Модель</span><b id="vision-model">apple_sorter_v1</b></div><div><span>Частота кадров</span><b id="vision-fps">0 FPS</b></div></div>
+    </div>
+</section>
+
+<section class="panel zone-calibration-panel">
+    <div class="panel-head">
+        <div><span class="eyebrow">КАЛИБРОВКА</span><h3>Рабочие зоны и зоны игнорирования</h3></div>
+        <span class="status-chip" id="zone-calibration-status">0 / 6</span>
+    </div>
+    <p class="rail-explanation">
+        Камера должна быть окончательно закреплена. Начало координат — левый нижний угол:
+        X направлена вправо, Y направлена вверх. Чёрными зонами обведите неподвижные части конструкции, которые YOLO ошибочно принимает за яблоки.
+    </p>
+    <div class="zone-calibration-controls">
+        <label>Редактируемая зона
+            <select id="zone-selector">
+                <option value="red.open">Красное — сработать (закрыть 690)</option>
+                <option value="red.close">Красное — освободить (открыть 500)</option>
+                <option value="green.open">Зелёное — сработать (закрыть 690)</option>
+                <option value="green.close">Зелёное — освободить (открыть 500)</option>
+                <option value="yellow.open">Жёлтое — сработать (закрыть 690)</option>
+                <option value="yellow.close">Жёлтое — освободить (открыть 500)</option>
+                <option value="ignore.0">Чёрная зона игнорирования 1</option>
+                <option value="ignore.1">Чёрная зона игнорирования 2</option>
+                <option value="ignore.2">Чёрная зона игнорирования 3</option>
+                <option value="ignore.3">Чёрная зона игнорирования 4</option>
+                <option value="ignore.4">Чёрная зона игнорирования 5</option>
+                <option value="ignore.5">Чёрная зона игнорирования 6</option>
+            </select>
+        </label>
+        <div class="split-actions">
+            <button class="quiet-button" id="zone-undo" type="button">Отменить вершину</button>
+            <button class="quiet-button" id="zone-clear" type="button">Очистить зону</button>
+            <button class="primary-button" id="zone-save" type="button">Сохранить все зоны</button>
+        </div>
+    </div>
+    <div class="zone-coordinate-readout">
+        <span>Курсор: <b id="zone-cursor-coordinate">X —, Y —</b></span>
+        <span>Вершин в выбранной зоне: <b id="zone-point-count">0</b></span>
+    </div>
+</section>
+
+<section class="panel"><div class="panel-head"><div><span class="eyebrow">СТАТИСТИКА</span><h3>Распределение объектов</h3></div></div><div class="class-stats three-stats"><div><i class="apple red"></i><b>Красное</b><strong id="count-red">0</strong></div><div><i class="apple green"></i><b>Зелёное</b><strong id="count-green">0</strong></div><div><i class="apple yellow"></i><b>Жёлтое</b><strong id="count-yellow">0</strong></div></div></section>
+{% endblock %}

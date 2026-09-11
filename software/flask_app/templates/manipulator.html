@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %}манипулятор{% endblock %}
+{% block header %}Манипулятор и рельса{% endblock %}
+{% block content %}
+<div class="page-intro simple-intro"><h2>Управление манипулятором</h2></div>
+<nav class="manipulator-tabs" aria-label="Разделы управления манипулятором">
+    <a class="active" href="{{ url_for('manipulator') }}">Ручное управление</a>
+    <a href="{{ url_for('manipulator_routes') }}">Маршрутные точки</a>
+</nav>
+
+<section class="panel arm-preview-panel arm-panel-wide">
+    <div class="panel-head"><div><span class="eyebrow">КИНЕМАТИЧЕСКАЯ СХЕМА</span><h3>Положение манипулятора</h3></div><span class="tag">4 оси · вилы 120 мм</span></div>
+    <svg id="arm-visual" class="arm-visual" viewBox="0 0 1320 500" role="img" aria-label="Четырёхосевой манипулятор на подвижной каретке рельсы в видах сбоку, сверху и в объёмной проекции">
+        <rect x="8" y="8" width="420" height="470" rx="14" class="view-surface"/><rect x="450" y="8" width="420" height="470" rx="14" class="view-surface"/><rect x="892" y="8" width="420" height="470" rx="14" class="view-surface"/>
+        <text x="30" y="37" class="view-title">ВИД СБОКУ</text><text x="472" y="37" class="view-title">ВИД СВЕРХУ</text><text x="914" y="37" class="view-title">ОБЪЁМНАЯ СХЕМА</text>
+        <g id="arm-side"><path d="M34 444H401" class="rail-guide"/><path d="M34 453H401" class="rail-guide rail-guide-secondary"/><rect x="54" y="414" width="48" height="33" rx="6" class="carriage-body"/><rect x="54" y="404" width="48" height="14" rx="4" class="carriage-platform"/><circle cx="59" cy="449" r="5" class="carriage-wheel"/><circle cx="97" cy="449" r="5" class="carriage-wheel"/><line x1="78" y1="414" x2="78" y2="312" class="arm-base"/><path id="side-l2" class="arm-link shoulder-link"/><path id="side-l3" class="arm-link"/><path id="side-l4" class="arm-link tool-link"/><path id="side-mount" class="fork-mount"/><path id="side-forks-a" class="forks"/><path id="side-forks-b" class="forks"/><path id="side-crossbar" class="fork-crossbar"/><circle id="side-shoulder" r="11" class="arm-joint fixed"/><circle id="side-elbow" r="11" class="arm-joint drag-handle" data-arm-handle="elbow"/><circle id="side-wrist" r="11" class="arm-joint drag-handle" data-arm-handle="wrist"/><circle id="side-tool" r="10" class="arm-joint drag-handle" data-arm-handle="wrist"/><text x="41" y="474" class="mechanism-label">КАРЕТКА НА ЛИНЕЙНОЙ РЕЛЬСЕ</text></g>
+        <g id="arm-top"><circle cx="660" cy="240" r="175" class="workspace-ring"/><path d="M474 218H846M474 262H846" class="rail-guide"/><rect x="626" y="207" width="68" height="66" rx="8" class="carriage-body"/><rect x="636" y="216" width="48" height="48" rx="7" class="carriage-platform"/><path id="top-l2" class="arm-link shoulder-link"/><path id="top-l3" class="arm-link"/><path id="top-l4" class="arm-link tool-link"/><path id="top-forks-a" class="forks"/><path id="top-forks-b" class="forks"/><path id="top-crossbar" class="fork-crossbar"/><circle id="top-base" cx="660" cy="240" r="16" class="arm-joint fixed"/><circle id="top-shoulder" r="10" class="arm-joint fixed"/><circle id="top-elbow" r="10" class="arm-joint drag-handle" data-arm-handle="top"/><circle id="top-wrist" r="10" class="arm-joint drag-handle" data-arm-handle="top"/><circle id="top-tool" r="10" class="arm-joint drag-handle" data-arm-handle="top"/><text x="552" y="290" class="mechanism-label">НАПРАВЛЕНИЕ РЕЛЬСЫ</text></g>
+        <g id="arm-iso"><path d="M930 449L1238 402M947 462L1255 415" class="rail-guide"/><path d="M1062 425l61-10 38 17-62 11z" class="carriage-body"/><path d="M1077 418l44-7 27 12-45 8z" class="carriage-platform"/><path id="iso-base" class="iso-base"/><path id="iso-l2" class="arm-link shoulder-link"/><path id="iso-l3" class="arm-link"/><path id="iso-l4" class="arm-link tool-link"/><path id="iso-mount" class="fork-mount"/><path id="iso-forks-a" class="forks"/><path id="iso-forks-b" class="forks"/><path id="iso-crossbar" class="fork-crossbar"/><circle id="iso-shoulder" r="11" class="arm-joint fixed"/><circle id="iso-elbow" r="10" class="arm-joint"/><circle id="iso-wrist" r="10" class="arm-joint"/><circle id="iso-tool" r="10" class="arm-joint"/><text x="930" y="475" class="mechanism-label">РЕЛЬСА · КАРЕТКА · ОСНОВАНИЕ</text></g>
+    </svg>
+    <div class="drag-hint">Точки сочленений можно перетаскивать: локоть и кисть меняют позу, а точка в виде сверху поворачивает основание.</div>
+</section>
+
+<section class="manipulator-control-grid">
+    <div class="panel compact-servo-panel">
+        <div class="panel-head"><div><span class="eyebrow">СЕРВОПРИВОДЫ</span><h3>Положения осей</h3></div><button class="quiet-button" data-command="home">Домашняя поза</button></div>
+        <div class="joint-list">
+            <div class="joint-row"><div class="joint-title"><b>ID 1</b><span>База</span></div><input class="joint-slider" type="range" min="0" max="1000" value="500" data-joint="1"><output class="joint-value" data-output="1">500</output></div>
+            <div class="joint-row"><div class="joint-title"><b>ID 10</b><span>Плечо</span></div><input class="joint-slider" type="range" min="0" max="1000" value="500" data-joint="10"><output class="joint-value" data-output="10">500</output></div>
+            <div class="joint-row"><div class="joint-title"><b>ID 11</b><span>Локоть</span></div><input class="joint-slider" type="range" min="0" max="1000" value="375" data-joint="11"><output class="joint-value" data-output="11">375</output></div>
+            <div class="joint-row"><div class="joint-title"><b>ID 16</b><span>Кисть</span></div><input class="joint-slider" type="range" min="0" max="1000" value="500" data-joint="16"><output class="joint-value" data-output="16">500</output></div>
+        </div>
+    </div>
+    <div class="panel rail-control-panel">
+        <div class="panel-head"><div><span class="eyebrow">РЕЛЬСА</span><h3>Положение каретки</h3></div><span class="tag">0–347 мм · 13 880 имп.</span></div>
+        <div class="rail-position-readout">
+            <div><span>Текущее положение</span><strong><output id="rail-current-mm">0.0</output><small> мм</small></strong><em id="rail-reference-state">без HOME</em></div>
+            <label for="rail-target-mm"><span>Заданное положение, мм</span><span class="rail-mm-entry"><input id="rail-target-mm" type="number" min="0" max="347" step="0.1" value="0" inputmode="decimal"><button class="primary-button" id="rail-move" type="button">Переместить</button></span></label>
+        </div>
+        <div class="range-line"><span>0 мм · жёлтый</span><input id="rail-target" type="range" min="0" max="347" step="0.1" value="0" aria-label="Заданное положение рельсы"><span>347 мм · MAX</span></div>
+        <p class="rail-explanation">Ноль находится со стороны жёлтого контейнера. Большее значение перемещает манипулятор к дозатору. Калибровка: 40 имп/мм.</p>
+        <div class="rail-speed-control">
+            <div class="speed-value"><span>Скорость движения</span><strong><span id="rail-speed-number">100</span>%</strong></div>
+            <input id="rail-speed" class="big-slider" type="range" min="1" max="100" value="100">
+            <div class="rail-speed-caption">Текущая частота: <b id="rail-speed-pps">2000 имп/с</b></div>
+        </div>
+        <button class="quiet-button rail-home-button" id="rail-home">Ноль рельсы</button>
+    </div>
+</section>
+
+<section class="panel target-panel">
+    <div class="panel-head"><div><span class="eyebrow">ЦЕЛЕВАЯ ТОЧКА</span><h3>Переход к координатам</h3></div><span class="tag">мм / градусы</span></div>
+    <div class="form-grid"><label>X<input id="ik-x" type="number" value="280" step="1"></label><label>Y<input id="ik-y" type="number" value="0" step="1"></label><label>Z<input id="ik-z" type="number" value="330" step="1"></label><label>φ<input id="ik-phi" type="number" value="0" step="1"></label></div>
+    <button class="primary-button full" id="ik-send">Перейти в точку</button>
+    <div id="ik-result" class="result-box">Введите координаты и нажмите кнопку.</div>
+</section>
+{% endblock %}
